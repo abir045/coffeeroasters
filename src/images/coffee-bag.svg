@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 187.96 247.33" version="1.1">
+  <defs id="defs4">
+    <linearGradient id="linearGradient3704" y2="225.3" gradientUnits="userSpaceOnUse" y1="130.6" x2="25.13" x1="-8.0812">
+      <stop id="stop3700" stop-color="#f0c9a4" offset="0"/>
+      <stop id="stop3702" stop-color="#d0751d" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3712" x1="-22.728" gradientUnits="userSpaceOnUse" y1="284.78" gradientTransform="translate(.10102 .40914)" x2="-34.345" y2="292.39">
+      <stop id="stop3708" stop-color="#b96c20" offset="0"/>
+      <stop id="stop3710" stop-color="#e19245" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3730" x1="-12.5" gradientUnits="userSpaceOnUse" y1="301.36" gradientTransform="translate(-.5)" x2="-20.961" y2="329.6">
+      <stop id="stop3726" stop-color="#6d4d2c" offset="0"/>
+      <stop id="stop3728" stop-color="#c8721e" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3748" y2="306.61" gradientUnits="userSpaceOnUse" y1="356.36" x2="53" x1="63">
+      <stop id="stop3744" stop-color="#f0c9a4" offset="0"/>
+      <stop id="stop3746" stop-color="#f0c9a4" stop-opacity=".048872" offset="1"/>
+    </linearGradient>
+    <filter id="filter3804" width="1.1255" y="-.27573" x="-.062741" height="1.5515" color-interpolation-filters="sRGB">
+      <feGaussianBlur id="feGaussianBlur3806" stdDeviation="4.3657407"/>
+    </filter>
+  </defs>
+  <g id="layer1" transform="translate(61.478 -97.509)">
+    <path id="path3750" filter="url(#filter3804)" d="m-51 315.36 45 19 122-22-47-16-120 19z" fill="#555753"/>
+    <path id="path3736" d="m6.5398 127.13v-17.5l7.5-10 35.5 6 5.5 10-0.5 21.5-6-2-0.5-22.5-33-4.5-1.5 3 0.5 18.5-7.5-2.5z" fill="#d1751c"/>
+    <path id="path3734" d="m13.964 125.01v-17.5l7.5-10 35.5 6 5.5 10-0.5 21.5-6-2-0.5-22.5-33-4.5-1.5 3 0.5 18.5-7.5-2.5z" fill="#e09e5f"/>
+    <path id="path2910" fill="url(#linearGradient3730)" d="m-8.0761 329.6-26.769-11.11 28.244-26.23-1.4751 37.34z"/>
+    <path id="path2912" fill="url(#linearGradient3712)" d="m-6.667 131.11-20.506-2.6264 1.8105 65.668-8.8816 125.25 28.183-22.93-0.60609-165.36z"/>
+    <path id="path2908" fill="url(#linearGradient3704)" d="m-15.657 120.5 112.13 14.142 0.69749 58.04 13.445 118.23-118.69 19.193s0.65952-4.4445 0.032241-16.281c-1.3772-25.988-0.57535-74.684-2.5461-116.7-1.962-41.828-6.7034-77.036-5.0622-76.626z"/>
+    <path id="path3738" d="m55.751 104.13-0.70711 4.5962-2.4749-4.9498 3.182 0.35356z" fill="#ae6722"/>
+    <path id="path3740" fill="url(#linearGradient3748)" d="m-7.1317 328.79 117.93-17.69-1.7-10.05-116.02 13.42-0.2117 14.32z"/>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>carton bag</dc:title>
+        <dc:date>2010-02-12T21:47:58</dc:date>
+        <dc:description>bag, bag, carton, carton, clip art, clipart, image, media, png, public domain, recycle, recycle, shopping, shopping, svg, </dc:description>
+        <dc:source>http://openclipart.org/detail/29270/carton-bag-by-rg1024-29270</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>rg1024</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>bag</rdf:li>
+            <rdf:li>carton</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>image</rdf:li>
+            <rdf:li>media</rdf:li>
+            <rdf:li>png</rdf:li>
+            <rdf:li>public domain</rdf:li>
+            <rdf:li>recycle</rdf:li>
+            <rdf:li>shopping</rdf:li>
+            <rdf:li>svg</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
