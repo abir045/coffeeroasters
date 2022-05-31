@@ -2,7 +2,10 @@ import React from "react";
 import Hero from "../../images/hero_wide.jpeg";
 import Mobile from "../../images/hero_mobile.jpeg";
 import Tablet from "../../images/hero_tablet.jpeg";
-import CoffeBag from "../../images/carton.png";
+import CoffeBag from "../../images/gran_espresso.png";
+import Planalto from "../../images/planato.png";
+import Piccolo from "../../images/piccolo.png";
+import Danche from "../../images/danche.png";
 
 const Home = () => {
   return (
@@ -43,50 +46,64 @@ const Home = () => {
       </div>
 
       {/*Menu conatainer  */}
-      <div className="flex flex-col p-8 items-center mx-auto relative">
-        <h1 className="text-5xl font-bold tracking-wide  text-gray-300">
+      <div className="block">
+        <h1 className="mt-4 text-center text-9xl font-bold sm:tracking-[.15em] text-gray-300">
           our collection
         </h1>
-        <img className="p-8" src={CoffeBag} alt="menu" />
-        <h2 className="absolute sm:left-[35%] md:left-[40%] lg:w-1/6  top-[10%] lg:top-[13%] text-3xl w-1/4 italic font-bold rotate-90">
-          Gran Espresso
-        </h2>
-        <h3 className="text-5xl font-bold text-gray-800">Gran Espresso</h3>
-        <p className="text-center text-2xl p-4 leading-10 text-gray-500">
-          Light and flavorful blend with cocoa and black pepper for an intense
-          exoperience
-        </p>
+      </div>
+
+      <div className="flex flex-col p-8 items-center  md:flex-row md:justify-evenly md:-mt-12 md:pt-1">
+        <img className="w-[250px]" src={CoffeBag} alt="menu" />
+
         {/* 2nd item */}
-        <img className="p-8" src={CoffeBag} alt="menu" />
-        <h2 className="absolute top-[35%] lg:top-[38%] sm:left-[35%] md:left-[40%] lg:w-1/6 text-3xl italic font-bold rotate-90">
-          Planalto
-        </h2>
-        <h3 className="text-5xl font-bold text-gray-800">Planalto</h3>
-        <p className="text-center text-2xl p-4 leading-10 text-gray-500">
-          Brazilian dark roast with rich velvety and body, and rich with fruits
-          and nuts
-        </p>
+        <img className="w-[250px]  " src={Planalto} alt="menu" />
 
         {/* 3rd item */}
-        <img className="p-8" src={CoffeBag} alt="menu" />
-        <h2 className="absolute bottom-[40%] lg:bottom-[37%] sm:left-[35%] md:left-[40%] lg:w-1/6  text-3xl italic font-bold rotate-90">
-          Piccolo
-        </h2>
-        <h3 className="text-5xl font-bold text-gray-800">Piccolo</h3>
-        <p className="text-center text-2xl p-4 leading-10 text-gray-500">
-          Mild and smooth blend featuring notes of toasted almond and dried
-          cherry
-        </p>
-        {/* 4th item */}
-        <img className="p-8" src={CoffeBag} alt="menu" />
-        <h2 className="absolute bottom-[15%] lg:bottom-[12%] sm:left-[35%] md:left-[40%] lg:w-1/6 text-3xl italic font-bold rotate-90">
-          Danche
-        </h2>
+        <img className="w-[250px] " src={Piccolo} alt="menu" />
 
-        <h3 className="text-5xl font-bold text-gray-800">Danche</h3>
-        <p className="text-center text-2xl p-4 leading-10 text-gray-500">
-          Ethiopian hand-hervested blend densly packed with vibrant fruit notes
-        </p>
+        {/* 4th item */}
+        <img className="w-[250px] " src={Danche} alt="menu" />
+      </div>
+
+      <div className="flex flex-col p-8  md:flex-row md:justify-evenly">
+        <div className="flex flex-col  w-full">
+          <h3 className="text-4xl text-center font-bold text-gray-800 ">
+            Gran Espresso
+          </h3>
+          <p className="text-xl text-center m-2 p-2   leading-10 text-gray-500">
+            Light and flavorful blend with cocoa and black pepper for an intense
+            exoperience
+          </p>
+        </div>
+
+        <div className="flex flex-col m w-full mx-2">
+          <h3 className="text-center text-4xl font-bold text-gray-800">
+            Planalto
+          </h3>
+          <p className="text-center text-xl p-2 m-2 leading-10 text-gray-500">
+            Brazilian dark roast with rich velvety and body, and rich with
+            fruits and nuts
+          </p>
+        </div>
+
+        <div className="flex flex-col w-full mx-2">
+          <h3 className="text-4xl text-center font-bold text-gray-800">
+            Piccolo
+          </h3>
+          <p className="text-center text-xl text-center p-4 leading-10 text-gray-500">
+            Mild and smooth blend featuring notes of toasted almond and dried
+            cherry
+          </p>
+        </div>
+        <div className="flex flex-col w-full mx-2 ">
+          <h3 className="text-4xl text-center font-bold text-gray-800">
+            Danche
+          </h3>
+          <p className="text-center text-xl p-2 m-2 leading-10 text-gray-500">
+            Ethiopian hand-hervested blend densly packed with vibrant fruit
+            notes
+          </p>
+        </div>
       </div>
     </>
   );
