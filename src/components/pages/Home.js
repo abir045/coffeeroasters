@@ -30,13 +30,13 @@ const Home = () => {
           <h1 className="text-center text-white p-4 font-bold text-5xl sm:text-left  md:text-6xl  w-full  xl:w-1/3  md:w-1/2 sm:w-2/3">
             Great coffee made simple.
           </h1>
-          <p className="text-base text-center md:text-left sm:text-left  text-gray-300 p-4 tracking-wide w-full leading-7 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-4/5 ">
+          <p className="text-xl text-center md:text-left sm:text-left  text-gray-300 p-4 tracking-wide w-full leading-10 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-4/5 ">
             Start your mornings with the worlds best coffee.Try our expertly
             curated artisan coffees from our best roasters delivered directly to
             your door, at your schedule
           </p>
 
-          <button className="text-white mx-14  text-3xl bg-teal-700 font-bold rounded-lg p-6 m-4 sm:mx-4">
+          <button className="text-white mx-16  text-3xl bg-teal-700 font-bold rounded-lg p-6 my-10 sm:mx-4">
             Create your plan
           </button>
         </div>
@@ -48,7 +48,7 @@ const Home = () => {
           our collection
         </h1>
         <img className="p-8" src={CoffeBag} alt="menu" />
-        <h2 className="absolute left-[35%] top-[10%] text-3xl w-1/4 italic font-bold rotate-90">
+        <h2 className="absolute sm:left-[35%] md:left-[40%] lg:w-1/6  top-[10%] lg:top-[13%] text-3xl w-1/4 italic font-bold rotate-90">
           Gran Espresso
         </h2>
         <h3 className="text-5xl font-bold text-gray-800">Gran Espresso</h3>
@@ -58,7 +58,7 @@ const Home = () => {
         </p>
         {/* 2nd item */}
         <img className="p-8" src={CoffeBag} alt="menu" />
-        <h2 className="absolute top-[35%] left-[30%] text-3xl italic font-bold rotate-90">
+        <h2 className="absolute top-[35%] lg:top-[38%] sm:left-[35%] md:left-[40%] lg:w-1/6 text-3xl italic font-bold rotate-90">
           Planalto
         </h2>
         <h3 className="text-5xl font-bold text-gray-800">Planalto</h3>
@@ -69,7 +69,7 @@ const Home = () => {
 
         {/* 3rd item */}
         <img className="p-8" src={CoffeBag} alt="menu" />
-        <h2 className="absolute bottom-[40%] left-[35%] text-3xl italic font-bold rotate-90">
+        <h2 className="absolute bottom-[40%] lg:bottom-[37%] sm:left-[35%] md:left-[40%] lg:w-1/6  text-3xl italic font-bold rotate-90">
           Piccolo
         </h2>
         <h3 className="text-5xl font-bold text-gray-800">Piccolo</h3>
@@ -79,7 +79,7 @@ const Home = () => {
         </p>
         {/* 4th item */}
         <img className="p-8" src={CoffeBag} alt="menu" />
-        <h2 className="absolute bottom-[15%] left-[35%] text-3xl italic font-bold rotate-90">
+        <h2 className="absolute bottom-[15%] lg:bottom-[12%] sm:left-[35%] md:left-[40%] lg:w-1/6 text-3xl italic font-bold rotate-90">
           Danche
         </h2>
 

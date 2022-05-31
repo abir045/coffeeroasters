@@ -1,6 +1,7 @@
 import React from "react";
 import Coffee from "../images/coffee.svg";
 import { Link } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   return (
@@ -10,6 +11,9 @@ const Navbar = () => {
           <img className="w-[30px] -rotate-90 mx-1" src={Coffee} alt="coffee" />
           <h3 className="font-bold text-3xl">coffeeroasters</h3>
         </div>
+
+        <GiHamburgerMenu size={40} className="mx-auto mr-8" />
+
         <div className="hidden sm:flex p-8 font-medium  text-gray-900">
           <div className="text-xs  uppercase sm:mx-1">Home</div>
           <div className="text-xs uppercase sm:mx-1">About Us</div>
