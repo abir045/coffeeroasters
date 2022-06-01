@@ -47,59 +47,59 @@ const Home = () => {
 
       {/*Menu conatainer  */}
       <div className="block">
-        <h1 className="mt-4 text-center text-9xl font-bold sm:text-7xl sm:tracking-[.1em] text-gray-300">
+        <h1 className="mt-4 text-center text-6xl font-bold sm:text-7xl lg:text-9xl xl:text-9xl sm:tracking-[.1em] text-gray-300">
           our collection
         </h1>
       </div>
 
-      <div className="flex flex-col p-8 items-center  md:flex-row md:justify-evenly md:-mt-12 md:pt-1">
-        <img className="w-[150px]" src={CoffeBag} alt="menu" />
+      <div className="flex flex-col p-8 items-center  md:flex-row md:justify-evenly  md:-mt-12 md:pt-1">
+        <img className="w-[150px] " src={CoffeBag} alt="menu" />
 
         {/* 2nd item */}
-        <img className="w-[150px]  " src={Planalto} alt="menu" />
+        <img className="w-[150px]" src={Planalto} alt="menu" />
 
         {/* 3rd item */}
-        <img className="w-[150px] " src={Piccolo} alt="menu" />
+        <img className="w-[150px]" src={Piccolo} alt="menu" />
 
         {/* 4th item */}
-        <img className="w-[150px] " src={Danche} alt="menu" />
+        <img className="w-[150px]" src={Danche} alt="menu" />
       </div>
 
       <div className="flex flex-col p-8  md:flex-row md:justify-evenly">
         <div className="flex flex-col  w-full">
-          <h3 className="text-4xl text-center font-bold text-gray-800 ">
+          <h3 className="text-3xl text-center font-bold text-gray-800 ">
             Gran Espresso
           </h3>
-          <p className="text-lg text-center m-4 p-4   leading-10 text-gray-500">
+          <p className="text-lg text-center w-full m-2 p-2 leading-10 text-gray-500">
             Light and flavorful blend with cocoa and black pepper for an intense
             exoperience
           </p>
         </div>
 
-        <div className="flex flex-col m w-full mx-2">
-          <h3 className="text-center text-4xl font-bold text-gray-800">
+        <div className="flex flex-col w-full ">
+          <h3 className="text-center text-3xl font-bold text-gray-800">
             Planalto
           </h3>
-          <p className="text-center text-lg p-2 m-2 leading-10 text-gray-500">
+          <p className="text-center text-lg w-full p-2 m-2 leading-10 text-gray-500">
             Brazilian dark roast with rich velvety and body, and rich with
             fruits and nuts
           </p>
         </div>
 
-        <div className="flex flex-col w-full mx-2">
-          <h3 className="text-4xl text-center font-bold text-gray-800">
+        <div className="flex flex-col w-full">
+          <h3 className="text-3xl text-center font-bold text-gray-800">
             Piccolo
           </h3>
-          <p className="text-lg text-center p-4 leading-10 text-gray-500">
+          <p className="text-lg text-center w-full p-4 leading-10 text-gray-500">
             Mild and smooth blend featuring notes of toasted almond and dried
             cherry
           </p>
         </div>
-        <div className="flex flex-col w-full mx-2 ">
-          <h3 className="text-4xl text-center font-bold text-gray-800">
+        <div className="flex flex-col w-full">
+          <h3 className="text-3xl text-center font-bold text-gray-800">
             Danche
           </h3>
-          <p className="text-center text-lg p-2 m-2 leading-10 text-gray-500">
+          <p className="text-center text-lg w-full p-2 m-2 leading-10 text-gray-500">
             Ethiopian hand-hervested blend densly packed with vibrant fruit
             notes
           </p>
