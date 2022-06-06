@@ -6,6 +6,9 @@ import CoffeBag from "../../images/gran_espresso.png";
 import Planalto from "../../images/planato.png";
 import Piccolo from "../../images/piccolo.png";
 import Danche from "../../images/danche.png";
+import Bean from "../../images/coffee-last.svg";
+import Gift from "../../images/shipping-2.svg";
+import Shipping from "../../images/shipping.svg";
 
 const Home = () => {
   return (
@@ -53,7 +56,7 @@ const Home = () => {
           our collection
         </h1>
       </div>
-
+      {/* items container */}
       <div className="flex flex-col p-8 items-center sm:-mt-11 md:flex-row md:justify-between md:ml-7 md:-mt-12 md:pt-1">
         <div className="flex flex-col sm:flex-row w-full mb-2">
           <img className="w-[200px] mx-auto" src={CoffeBag} alt="menu" />
@@ -112,9 +115,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* text container for desktop */}
 
-      <div className="flex flex-col p-8 sm:flex-col md:flex-row md:justify-evenly">
-        {/* <div className="flex flex-col  w-full">
+      <div className="hidden p-8 md:flex  md:justify-evenly">
+        <div className="flex flex-col  w-full">
           <h3 className="text-3xl text-center font-bold text-gray-800 ">
             Gran Espresso
           </h3>
@@ -151,8 +155,66 @@ const Home = () => {
             Ethiopian hand-hervested blend densly packed with vibrant fruit
             notes
           </p>
-        </div> */}
+        </div>
       </div>
+
+      {/* why choose us section */}
+      <section className="flex-col p-8  bg-gray-900 relative">
+        <div className="flex-col text-center h-[900px] mb-4 md:h-[350px] mx-auto">
+          <h1 className=" text-white p-4 m-4 text-5xl">Why choose us?</h1>
+          <p className=" text-gray-300 text-lg text-center">
+            A large part of our role is choosing which particular coffees will
+            be featured in our range. That means working closely with the best
+            coffee growers to give you a more impactful experience at every
+            level.
+          </p>
+        </div>
+        {/* reasons to choose container */}
+
+        <div className="absolute top-[35%] p-8 md:top-[65%] text-center justify-center m-auto left-0 right-0 flex flex-col  md:flex-row">
+          {/* 1st card */}
+          <div className="flex flex-col bg-teal-700 w-[300px] p-4 m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+            <img src={Bean} className="w-1/2 mx-auto m-8 sm:w-1/5" />
+            <div className="flex flex-col ">
+              <h2 className=" text-white text-center  p-4  text-3xl">
+                Best Quality
+              </h2>
+              <p className="text-white p-4 text-center text-base mx-4">
+                Discover an endless variety of the world's best artisan coffee
+                from each of our roasters
+              </p>
+            </div>
+          </div>
+
+          {/* 2nd card */}
+
+          <div className="flex flex-col bg-teal-700 w-[300px] p-4  m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+            <img src={Gift} className="w-1/2 mx-auto m-8 sm:w-1/5" />
+            <div className="flex flex-col">
+              <h2 className="text-white text-center p-4 text-3xl">
+                Exclusive Benefits
+              </h2>
+              <p className="text-white p-4 text-center text-base mx-4">
+                Special offers and swag when you subscribe, including 30% off
+                your first shipment
+              </p>
+            </div>
+          </div>
+          {/* 3rd card */}
+          <div className="flex flex-col bg-teal-700 w-[300px] p-4 m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+            <img src={Shipping} className="w-1/2 mx-auto m-8 sm:w-1/4" />
+            <div className="flex flex-col">
+              <h2 className="text-white text-center p-4 text-3xl">
+                Free Shipping
+              </h2>
+              <p className="text-white p-4 text-center text-base mx-4">
+                We cover the cost and the coffee is delivered fast. Peak
+                freshness : guaranteed
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

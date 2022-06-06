@@ -1,5 +1,5 @@
 import React from "react";
-import Coffee from "../images/coffee.svg";
+import Coffee from "../images/coffee-2.svg";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
