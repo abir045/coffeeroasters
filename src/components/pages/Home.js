@@ -115,7 +115,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* text container for desktop */}
+      {/* text container for desktop size */}
 
       <div className="hidden p-8 md:flex  md:justify-evenly">
         <div className="flex flex-col  w-full">
@@ -160,7 +160,7 @@ const Home = () => {
 
       {/* why choose us section */}
       <section className="flex-col p-8  bg-gray-900 relative">
-        <div className="flex-col text-center h-[900px] mb-4 md:h-[350px] mx-auto">
+        <div className="flex-col rounded text-center h-[900px] mb-4 sm:h-[500px]  md:h-[350px] mx-auto">
           <h1 className=" text-white p-4 m-4 text-5xl">Why choose us?</h1>
           <p className=" text-gray-300 text-lg text-center">
             A large part of our role is choosing which particular coffees will
@@ -171,9 +171,9 @@ const Home = () => {
         </div>
         {/* reasons to choose container */}
 
-        <div className="absolute top-[35%] p-8 md:top-[65%] text-center justify-center m-auto left-0 right-0 flex flex-col  md:flex-row">
+        <div className="absolute top-[35%] p-8 md:top-[65%] text-center justify-center m-auto left-0 right-0 flex flex-col   md:flex-row">
           {/* 1st card */}
-          <div className="flex flex-col bg-teal-700 w-[300px] p-4 m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-4 m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img src={Bean} className="w-1/2 mx-auto m-8 sm:w-1/5" />
             <div className="flex flex-col ">
               <h2 className=" text-white text-center  p-4  text-3xl">
@@ -188,7 +188,7 @@ const Home = () => {
 
           {/* 2nd card */}
 
-          <div className="flex flex-col bg-teal-700 w-[300px] p-4  m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-4  m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img src={Gift} className="w-1/2 mx-auto m-8 sm:w-1/5" />
             <div className="flex flex-col">
               <h2 className="text-white text-center p-4 text-3xl">
@@ -201,7 +201,7 @@ const Home = () => {
             </div>
           </div>
           {/* 3rd card */}
-          <div className="flex flex-col bg-teal-700 w-[300px] p-4 m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-4 m-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img src={Shipping} className="w-1/2 mx-auto m-8 sm:w-1/4" />
             <div className="flex flex-col">
               <h2 className="text-white text-center p-4 text-3xl">
@@ -210,6 +210,72 @@ const Home = () => {
               <p className="text-white p-4 text-center text-base mx-4">
                 We cover the cost and the coffee is delivered fast. Peak
                 freshness : guaranteed
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* procedure description  section*/}
+      <section className="flex flex-col ">
+        <div className="flex flex-col mt-[200%] p-8 m-6 sm:mt-[60%] md:mt-[50%] lg:mt-[40%] xl:mt-[30%]">
+          <h1 className="text-gray-700 text-center font-bold text-2xl bg-blend-color-burn sm:text-left">
+            How it works
+          </h1>
+          {/* indicators */}
+          <div className="hidden sm:flex my-8">
+            <div className="flex  rounded-full w-[25px] h-[25px] border-2 border-teal-700"></div>
+
+            <hr className="flex items-center h-[3px] justify-center w-[160px] md:w-[200px] lg:w-[280px]  border  border-orange-100 my-3 shadow-inner shadow-orange-100" />
+
+            <div className="flex  rounded-full w-[25px] h-[25px] border-2 border-teal-700"></div>
+
+            <hr className="flex items-center h-[3px] justify-center w-[160px] md:w-[200px] lg:w-[280px] border  border-orange-100 my-3 shadow-inner shadow-orange-100" />
+
+            <div className="flex  rounded-full w-[25px] h-[25px] border-2 border-teal-700"></div>
+          </div>
+
+          {/* steps */}
+
+          <div className="flex flex-col sm:flex-row md:flex-row sm:space-x-3">
+            <div className="flex flex-col">
+              <span className="text-orange-200 font-bold text-center text-7xl my-6 sm:text-left">
+                01
+              </span>
+              <h2 className="text-3xl text-center font-bold my-6 sm:text-left">
+                Pick Your Coffee
+              </h2>
+              <p className="text-sm text-center my-6 w-full sm:text-left sm:p-1">
+                Select from our evolving range of artisan coffees. Our beans are
+                ethically sourced and we pay fair price for them. There are new
+                coffees in all profiles every month for you to try out
+              </p>
+            </div>
+
+            <div className="flex flex-col">
+              <span className="text-orange-200 font-bold text-center text-7xl my-6 sm:text-left">
+                02
+              </span>
+              <h2 className="text-3xl text-center font-bold my-6 sm:text-left">
+                Pick Your Coffee
+              </h2>
+              <p className="text-sm text-center my-6 w-full sm:text-left sm:p-1">
+                Select from our evolving range of artisan coffees. Our beans are
+                ethically sourced and we pay fair price for them. There are new
+                coffees in all profiles every month for you to try out
+              </p>
+            </div>
+
+            <div className="flex flex-col">
+              <span className="text-orange-200 font-bold text-center text-7xl my-6 sm:text-left">
+                03
+              </span>
+              <h2 className="text-3xl text-center font-bold my-6 sm:text-left">
+                Pick Your Coffee
+              </h2>
+              <p className="text-sm text-center my-6 w-full sm:text-left sm:p-1">
+                Select from our evolving range of artisan coffees. Our beans are
+                ethically sourced and we pay fair price for them. There are new
+                coffees in all profiles every month for you to try out
               </p>
             </div>
           </div>
