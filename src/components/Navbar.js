@@ -14,15 +14,18 @@ const Navbar = () => {
 
         <GiHamburgerMenu size={40} className="mx-auto mr-8 sm:hidden" />
 
-        <div className="hidden sm:flex p-8 font-medium  text-gray-900 sm:mr-[5%]">
-          <a className="text-xs  cursor-pointer uppercase sm:mx-1" href="/">
+        <div className="hidden sm:flex p-8 font-bold space-x-6  text-gray-600 sm:mr-[5%]">
+          <a className="text-xs  cursor-pointer  uppercase sm:mx-1" href="/">
             Home
           </a>
-          <a className="text-xs cursor-pointer uppercase sm:mx-1" href="/about">
+          <a
+            className="text-xs cursor-pointer uppercase  sm:mx-1"
+            href="/about"
+          >
             About Us
           </a>
           <a
-            className="text-xs cursor-pointer uppercase sm:mx-1"
+            className="text-xs cursor-pointer uppercase  sm:mx-1"
             href="/create"
           >
             Create your plan
