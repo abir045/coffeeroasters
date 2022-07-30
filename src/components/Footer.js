@@ -8,7 +8,7 @@ import Instagram from "../images/instagram.svg";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center justify-between w-full bg-gray-800 pt-10  sm:flex-col md:flex-row">
+    <div className="flex flex-col items-center justify-between w-full bg-gray-800 pt-10 mx-6 my-6 rounded-lg   sm:flex-col md:flex-row">
       <div className="flex p-4 sm:p-8 justify-between ">
         <img className="w-[30px] -rotate-90 mx-1" src={Coffee} alt="coffee" />
         <h3 className="font-bold text-3xl text-white">coffeeroasters</h3>
@@ -17,7 +17,7 @@ const Footer = () => {
       {/* <GiHamburgerMenu size={40} className="mx-auto mr-8 sm:hidden" /> */}
 
       <div className="flex flex-col text-gray-400 space-y-6 text-center mt-5 sm:hidden">
-        <a className="text-xs  cursor-pointer uppercase   " href="/">
+        <a className="text-xs  cursor-pointer uppercase" href="/">
           Home
         </a>
         <a className="text-xs cursor-pointer uppercase  " href="/about">
