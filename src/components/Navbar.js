@@ -12,9 +12,9 @@ const Navbar = () => {
           <h3 className="font-bold text-3xl">coffeeroasters</h3>
         </div>
 
-        <GiHamburgerMenu size={40} className="mx-auto mr-8 sm:hidden" />
+        <GiHamburgerMenu size={40} className="mx-auto mr-8 md:hidden" />
 
-        <div className="hidden sm:flex p-8 font-bold space-x-6  text-gray-600 sm:mr-[5%]">
+        <div className="hidden md:flex p-8 font-bold space-x-6  text-gray-600 sm:mr-[5%]">
           <a className="text-xs  cursor-pointer  uppercase sm:mx-1" href="/">
             Home
           </a>

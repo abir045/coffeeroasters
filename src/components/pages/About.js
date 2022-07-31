@@ -6,22 +6,32 @@ import uk from "../../images/illustration-uk.svg";
 import canada from "../../images/illustration-canada.svg";
 import aussie from "../../images/illustration-australia.svg";
 import heroMb from "../../images/mb/image-hero-whitecup.jpg";
+import heroTab from "../../images/tab/image-hero-whitecup.jpg";
 import commitmentMb from "../../images/mb/image-commitment.jpg";
+import commitmentTab from "../../images/tab/image-commitment.jpg";
 import qualityMb from "../../images/mb/image-quality.jpg";
+import qualityTab from "../../images/tab/image-quality.jpg";
 
 const About = () => {
   return (
     <>
       <div className="flex flex-col relative mb-[15%] ">
-        <img
-          className="hidden w-full h-full px-2 mx-10 rounded-2xl md:block"
-          src={hero}
-          alt="hero banner"
-        />
         {/* for mb */}
         <img
-          className="w-full h-full mx-6 rounded-2xl  md:hidden"
+          className="w-full h-full mx-6 rounded-2xl sm:hidden"
           src={heroMb}
+        />
+
+        {/* for tab */}
+        <img
+          className="hidden w-full h-full mx-6 rounded-2xl sm:block md:hidden"
+          src={heroTab}
+        />
+        {/* for desktop */}
+        <img
+          className="hidden w-full h-full px-2 mx-10 rounded-2xl  md:block"
+          src={hero}
+          alt="hero banner"
         />
 
         <div className="absolute left-10 px-4 md:mx-[10%]  top-[30%]">
@@ -44,8 +54,15 @@ const About = () => {
         />
         {/* for mb */}
         <img
-          className="w-full h-full rounded-lg  md:hidden "
+          className="flex w-full h-full rounded-lg  sm:hidden"
           src={commitmentMb}
+          alt="barista"
+        />
+
+        {/* for tab */}
+        <img
+          className="hidden w-full h-full rounded-lg  sm:flex md:hidden "
+          src={commitmentTab}
           alt="barista"
         />
 
@@ -70,10 +87,10 @@ const About = () => {
       </div>
 
       <div className="flex flex-col bg-slate-800 rounded-lg mx-4 py-20 mt-20 relative">
-        <h1 className="text-white text-4xl p-4 md:mx-16 md:my-10 my-8 text-center">
+        <h1 className="text-white text-4xl p-4 md:text-left md:mx-12 md:my-10 my-8 text-center">
           Uncompromising <br /> quality
         </h1>
-        <p className="text-white md:mx-16 md:leading-8  mx-6">
+        <p className="text-white md:mx-16 md:w-[500px] md:leading-8  mx-6">
           Although we work with growers who pay close attention to all stages of
           harvest and processing, we employ, on our end, a rigorous quality
           control program to avoid over-roasting or baking the coffee dry. Every
@@ -81,18 +98,24 @@ const About = () => {
           is to roast consistent, user-friendly coffee, so that brewing is easy
           and enjoyable.
         </p>
-        <div className="flex  absolute md:right-[-15%] md:top-[-20%] left-[8%] top-[-10%]">
+        <div className="flex  absolute md:left-[60%]   sm:top-[-5%] left-[8%] top-[-10%]">
           <img
-            className="hidden rounded-lg object-cover w-[60%] h-[500px] md:block"
+            className="hidden rounded-lg object-cover w-[60%] h-[500px] md:w-[300px]  md:block"
             src={quality}
           />
+          {/* for mb */}
+          <img src={qualityMb} className="rounded-lg w-[300px]   sm:hidden" />
 
-          <img src={qualityMb} className="rounded-lg w-[300px]   md:hidden" />
+          {/* for tab */}
+          <img
+            src={qualityTab}
+            className="hidden rounded-lg w-[300px]   sm:flex md:hidden"
+          />
         </div>
       </div>
       <div className="flex flex-col mt-10 items-center  space-y-16 ">
         <h2 className="text-3xl font-bold  text-gray-500">Our headquaters</h2>
-        <div className="flex flex-col items-center space-y-6  md:flex-row md:justify-between">
+        <div className="flex flex-col items-center text-center  space-y-3 md:space-x-24  md:flex-row md:justify-between">
           <div className="flex-col">
             <img
               src={uk}
@@ -100,7 +123,7 @@ const About = () => {
               alt="uk map"
             />
             <h1 className="text-3xl font-bold mb-6">United Kingdom</h1>
-            <p className="leading-8 text-center">
+            <p className="leading-8 ">
               68 Asfordby Rd <br />
               Alcaston <br />
               SY6 1YA <br />
