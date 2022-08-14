@@ -86,7 +86,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col bg-slate-800 rounded-lg mx-4 py-20 mt-20 relative">
+      <div className="flex flex-col bg-slate-800 rounded-lg mx-[5%] py-20 mt-20 relative">
         <h1 className="text-white text-4xl p-4 md:text-left md:mx-12 md:my-10 my-8 text-center">
           Uncompromising <br /> quality
         </h1>
