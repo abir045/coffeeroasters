@@ -8,7 +8,7 @@ import Order from "../Order";
 
 const CreatePlan = ({ content }) => {
   // Receiving props from parent App.js
-  const { OrderForm } = content;
+  const { orderForm } = content;
 
   console.log(content);
 
@@ -62,7 +62,7 @@ const CreatePlan = ({ content }) => {
 
           <button>05 Deliveries </button>
         </div>
-        <Order content={OrderForm} />
+        <Order content={orderForm} />
       </section>
     </>
   );

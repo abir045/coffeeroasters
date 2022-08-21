@@ -1,10 +1,107 @@
-import React, { useState } from "react";
+import { Fragment, useState } from "react";
 
-const Accordion = ({ type, answer }) => {
-  // options with default values
-  const [isActive, setIsActive] = useState(false);
+import {
+  AccordionItemButton,
+  AccordionItem,
+  AccordionItemPanel,
+  AccordionItemHeading,
+} from "react-accessible-accordion";
 
-  return <></>;
-};
+import "react-accessible-accordion/dist/fancy-example.css";
 
-export default Accordion;
+export default function Example({
+  fieldset,
+  index,
+  prices,
+  priceFormatter,
+  userInput,
+  setUserInput,
+  grindOptionDisabled,
+  setGrindOptionDisabled,
+  accordionIndices,
+  setAccordionIndices,
+}) {
+  const handleChange = (event) => {
+    // destructuring name and id from user input
+    const { name, id } = event.target;
+    // setting new userinput
+    let newUserInput = { ...userInput, [name]: id };
+    setUserInput(newUserInput);
+
+    const currentIndex = Number(event.target.dataset.fieldsetindex);
+    let newAccordionIndices = [];
+    if (grindOptionDisabled && currentIndex === 2) {
+      // skip grindOption if it is disabled
+      newAccordionIndices = [...accordionIndices, currentIndex + 2];
+    } else {
+      newAccordionIndices = [...accordionIndices, currentIndex + 1];
+    }
+
+    // disable and close grindOption if preference is capsule
+    if (newUserInput.preference === "Capsule") {
+      setGrindOptionDisabled(true);
+      newAccordionIndices = newAccordionIndices.filter((num) => num !== 3);
+    } else {
+      setGrindOptionDisabled(false);
+    }
+    setAccordionIndices([...new Set(newAccordionIndices)]);
+  };
+
+  const getPricePerShipment = (card) => {
+    const quantity = userInput.quantity;
+    const delivery = card.heading;
+    if (!quantity) {
+      return "___";
+    }
+    const PricePerShipment = priceFormatter.format(
+      prices[quantity][delivery][0]
+    );
+
+    return PricePerShipment;
+  };
+
+  const cards = fieldset.cards.map((card) => (
+    <div
+      className="flex flex-col"
+      fieldset={fieldset.id}
+      key={card.heading}
+      cardName={card.heading}
+      userInput={userInput}
+    >
+      <input
+        type="radio"
+        name={fieldset.id}
+        id={card.heading}
+        onChange={handleChange}
+        data-fieldsetindex={index}
+      />
+      <label>
+        <h3>{card.heading}</h3>
+        <p>
+          {fieldset.id === "delivery"
+            ? getPricePerShipment(card) + " " + card.description
+            : card.description}
+        </p>
+      </label>
+    </div>
+  ));
+
+  console.log(cards);
+
+  return (
+    <AccordionItem
+    // disabled={fieldset.id === "grindOption" ? grindOptionDisabled : false}
+    >
+      <AccordionItemHeading>
+        <AccordionItemButton
+          className="flex items-center mb-6"
+          index={index}
+          accordionIndices={accordionIndices}
+        >
+          {fieldset.heading}
+        </AccordionItemButton>
+      </AccordionItemHeading>
+      <AccordionItemPanel className="flex">{cards}</AccordionItemPanel>
+    </AccordionItem>
+  );
+}
