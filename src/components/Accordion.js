@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Children, Fragment, useState } from "react";
 
 import {
   AccordionItemButton,
@@ -21,6 +21,8 @@ export default function Example({
   accordionIndices,
   setAccordionIndices,
 }) {
+  const [selected, setSelected] = useState("");
+
   const handleChange = (event) => {
     // destructuring name and id from user input
     const { name, id } = event.target;
@@ -62,21 +64,39 @@ export default function Example({
 
   const cards = fieldset.cards.map((card) => (
     <div
-      className="flex flex-col"
+      className="flex flex-col p-6 cursor-pointer select:bg-teal-500 "
       fieldset={fieldset.id}
       key={card.heading}
       cardName={card.heading}
       userInput={userInput}
     >
       <input
+        className="hidden"
         type="radio"
         name={fieldset.id}
         id={card.heading}
         onChange={handleChange}
         data-fieldsetindex={index}
       />
-      <label>
-        <h3>{card.heading}</h3>
+      <label
+        htmlFor={card.heading}
+        className="block rounded-lg  px-4 py-4"
+        style={{
+          backgroundColor:
+            userInput.preference === card.heading
+              ? "#0E8784"
+              : "#FEFCF7" && userInput.beanType === card.heading
+              ? "#0E8784"
+              : "#FEFCF7" && userInput.quantity === card.heading
+              ? "#0E8784"
+              : "#FEFCF7" && userInput.grindOption === card.heading
+              ? "#0E8784"
+              : "#FEFCF7" && userInput.delivery === card.heading
+              ? "#0E8784"
+              : "#FEFCF7",
+        }}
+      >
+        <h3 className="text-2xl font-bold mb-4">{card.heading}</h3>
         <p>
           {fieldset.id === "delivery"
             ? getPricePerShipment(card) + " " + card.description
@@ -90,18 +110,18 @@ export default function Example({
 
   return (
     <AccordionItem
-    // disabled={fieldset.id === "grindOption" ? grindOptionDisabled : false}
+      disabled={fieldset.id === "grindOption" ? grindOptionDisabled : false}
     >
       <AccordionItemHeading>
         <AccordionItemButton
-          className="flex items-center mb-6"
+          className="flex items-center mb-4 font-bold text-2xl text-gray-600 "
           index={index}
           accordionIndices={accordionIndices}
         >
           {fieldset.heading}
         </AccordionItemButton>
       </AccordionItemHeading>
-      <AccordionItemPanel className="flex">{cards}</AccordionItemPanel>
+      <AccordionItemPanel className="flex mb-8">{cards}</AccordionItemPanel>
     </AccordionItem>
   );
 }

@@ -18,6 +18,8 @@ const Order = ({ content }) => {
     delivery: null,
   });
 
+  console.log(userInput);
+
   // display modal states
 
   const [displayModal, setDisplayModal] = useState(false);
@@ -51,7 +53,7 @@ const Order = ({ content }) => {
 
   return (
     <div>
-      <Accordion onChange={toggleItem}>
+      <Accordion onChange={toggleItem} accordionIndices={accordionIndices}>
         {content.fieldsets.map((fieldset, index) => (
           <Example
             key={fieldset.id}
