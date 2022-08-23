@@ -8,6 +8,7 @@ import {
   AccordionItemState,
 } from "react-accessible-accordion";
 
+import { FaAngleDown } from "react-icons/fa";
 import "react-accessible-accordion/dist/fancy-example.css";
 //import DisplayName from "react-accessible-accordion/dist/types/helpers/DisplayName";
 
@@ -23,8 +24,6 @@ export default function Example({
   accordionIndices,
   setAccordionIndices,
 }) {
-  const [selected, setSelected] = useState("");
-
   const handleChange = (event) => {
     // destructuring name and id from user input
     const { name, id } = event.target;
@@ -32,23 +31,23 @@ export default function Example({
     let newUserInput = { ...userInput, [name]: id };
     setUserInput(newUserInput);
 
-    const currentIndex = Number(event.target.dataset.fieldsetindex);
-    let newAccordionIndices = [];
-    if (grindOptionDisabled && currentIndex === 2) {
-      // skip grindOption if it is disabled
-      newAccordionIndices = [...accordionIndices, currentIndex + 2];
-    } else {
-      newAccordionIndices = [...accordionIndices, currentIndex + 1];
-    }
+    // const currentIndex = Number(event.target.dataset.fieldsetindex);
+    // let newAccordionIndices = [];
+    // if (grindOptionDisabled && currentIndex === 2) {
+    //   // skip grindOption if it is disabled
+    //   newAccordionIndices = [...accordionIndices, currentIndex + 2];
+    // } else {
+    //   newAccordionIndices = [...accordionIndices, currentIndex + 1];
+    // }
 
     // disable and close grindOption if preference is capsule
-    if (newUserInput.preference === "Capsule") {
-      setGrindOptionDisabled(true);
-      newAccordionIndices = newAccordionIndices.filter((num) => num !== 3);
-    } else {
-      setGrindOptionDisabled(false);
-    }
-    setAccordionIndices([...new Set(newAccordionIndices)]);
+    // if (newUserInput.preference === "Capsule") {
+    //   setGrindOptionDisabled(true);
+    //   newAccordionIndices = newAccordionIndices.filter((num) => num !== 3);
+    // } else {
+    //   setGrindOptionDisabled(false);
+    // }
+    // setAccordionIndices([...new Set(newAccordionIndices)]);
   };
 
   const getPricePerShipment = (card) => {
@@ -66,7 +65,7 @@ export default function Example({
 
   const cards = fieldset.cards.map((card) => (
     <div
-      className="flex flex-col p-6 w-full cursor-pointer  "
+      className="flex flex-col items-center p-2 w-auto h-auto cursor-pointer  "
       fieldset={fieldset.id}
       key={card.heading}
       cardName={card.heading}
@@ -82,7 +81,7 @@ export default function Example({
       />
       <label
         htmlFor={card.heading}
-        className="block rounded-lg  px-4 py-4 w-full"
+        className="block rounded-lg  p-4 w-full"
         style={{
           backgroundColor:
             userInput.preference === card.heading
@@ -98,7 +97,7 @@ export default function Example({
               : "#FEFCF7",
         }}
       >
-        <h3 className="text-2xl font-bold mb-4">{card.heading}</h3>
+        <h3 className="text-2xl font-bold mb-2">{card.heading}</h3>
         <p>
           {fieldset.id === "delivery"
             ? getPricePerShipment(card) + " " + card.description
@@ -108,7 +107,15 @@ export default function Example({
     </div>
   ));
 
-  console.log(cards);
+  let rotation = 0;
+
+  function rotate() {
+    rotation += 180;
+    if (rotation === 360) {
+      rotation = 0;
+    }
+    document.querySelector("#angle").style.transform = `rotate(${rotation}deg)`;
+  }
 
   return (
     <AccordionItem>
@@ -127,7 +134,20 @@ export default function Example({
             accordionIndices={accordionIndices}
           >
             {fieldset.heading}
+            <FaAngleDown
+              id="angle"
+              className="transition-transform"
+              // accordionIndices={accordionIndices}
+              // onClick={rotate}
+              // style={{
+              //   transform: (accordionIndices, index) =>
+              //     accordionIndices.includes(index)
+              //       ? "rotate(180deg)"
+              //       : "rotate(0deg)",
+              // }}
+            />
           </div>
+          {/* {fieldset.heading} */}
         </AccordionItemButton>
       </AccordionItemHeading>
       <AccordionItemPanel className="flex mb-8">{cards}</AccordionItemPanel>

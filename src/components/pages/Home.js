@@ -10,7 +10,7 @@ import Bean from "../../images/coffee-last.svg";
 import Gift from "../../images/shipping-2.svg";
 import Shipping from "../../images/shipping.svg";
 import Steps from "../steps";
-import createButton from "../createButton";
+import CreateButton from "../createButton";
 
 const Home = () => {
   return (
@@ -221,15 +221,23 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div>
-          <h1 className="text-gray-700 text-center font-bold text-2xl bg-blend-color-burn sm:text-left">
-            How it works
-          </h1>
-        </div>
+        {/* <div>
+          
+        </div> */}
       </section>
       {/* procedure description  section*/}
-      <Steps />
-      <createButton />
+      <div className="flex flex-col lg:mt-[30%] mx-14 p-4 w-full">
+        <h1 className="text-gray-700  text-center font-bold text-2xl bg-blend-color-burn sm:text-left">
+          How it works
+        </h1>
+        <Steps />
+      </div>
+
+      <div className="flex mx-14">
+        <button className="text-white mx-16  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 sm:mx-4">
+          Create your plan
+        </button>
+      </div>
     </>
   );
 };

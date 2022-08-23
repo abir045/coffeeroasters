@@ -46,10 +46,10 @@ const CreatePlan = ({ content }) => {
           </p>
         </div>
       </div>
-      <div className="bg-[#333d4b] text-white w-full h-full my-10 mx-[5%] rounded-lg">
+      <div className="bg-[#333d4b] text-white h-[50%] mx-12 w-full p-4  mt-[5%] rounded-lg">
         <Steps />
       </div>
-      <section className="flex mx-[5%] space-x-10">
+      <section className="flex mx-[5%] mt-[15%] space-x-10">
         <Order content={orderForm} />
       </section>
     </>
