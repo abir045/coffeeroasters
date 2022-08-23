@@ -3,7 +3,7 @@ import React from "react";
 const Steps = () => {
   return (
     <section className="flex flex-col">
-      <div className="flex flex-col  p-8 m-6 sm:mt-[60%] md:mt-[50%] lg:mt-[10%] xl:mt-[30%]">
+      <div className="flex flex-col  p-8 m-6 sm:mt-[60%] md:mt-[50%] lg:mt-[30%] xl:mt-[30%]">
         {/* <h1 className="text-gray-700 text-center font-bold text-2xl bg-blend-color-burn sm:text-left">
           How it works
         </h1> */}

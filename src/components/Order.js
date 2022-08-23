@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Example from "./Accordion";
 import { Accordion } from "react-accessible-accordion";
 import OrderSummery from "./OrderSummery";
+import FormProgress from "./FormProgress";
 
 const priceFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -52,26 +53,36 @@ const Order = ({ content }) => {
   };
 
   return (
-    <div>
-      <Accordion onChange={toggleItem} accordionIndices={accordionIndices}>
-        {content.fieldsets.map((fieldset, index) => (
-          <Example
-            key={fieldset.id}
-            index={index}
-            fieldset={fieldset}
-            userInput={userInput}
-            setUserInput={setUserInput}
-            prices={content.prices}
-            priceFormatter={priceFormatter}
-            grindOptionDisabled={grindOptionDisabled}
-            setGrindOptionDisabled={setGrindOptionDisabled}
-            accordionIndices={accordionIndices}
-            setAccordionIndices={setAccordionIndices}
-          />
-        ))}
-      </Accordion>
+    <div className="flex">
+      <FormProgress
+        content={content.fieldsets}
+        userInput={userInput}
+        grindOptionDisabled={grindOptionDisabled}
+      />
+      <div className="flex-col w-full">
+        <Accordion onChange={toggleItem} index={accordionIndices}>
+          {content.fieldsets.map((fieldset, index) => (
+            <Example
+              key={fieldset.id}
+              index={index}
+              fieldset={fieldset}
+              userInput={userInput}
+              setUserInput={setUserInput}
+              prices={content.prices}
+              priceFormatter={priceFormatter}
+              grindOptionDisabled={grindOptionDisabled}
+              setGrindOptionDisabled={setGrindOptionDisabled}
+              accordionIndices={accordionIndices}
+              setAccordionIndices={setAccordionIndices}
+              disabled={
+                fieldset.id === "grindOption" ? grindOptionDisabled : false
+              }
+            />
+          ))}
+        </Accordion>
 
-      <OrderSummery content={content.summary} userInput={userInput} />
+        <OrderSummery content={content.summary} userInput={userInput} />
+      </div>
     </div>
   );
 };

@@ -5,9 +5,11 @@ import {
   AccordionItem,
   AccordionItemPanel,
   AccordionItemHeading,
+  AccordionItemState,
 } from "react-accessible-accordion";
 
 import "react-accessible-accordion/dist/fancy-example.css";
+//import DisplayName from "react-accessible-accordion/dist/types/helpers/DisplayName";
 
 export default function Example({
   fieldset,
@@ -64,7 +66,7 @@ export default function Example({
 
   const cards = fieldset.cards.map((card) => (
     <div
-      className="flex flex-col p-6 cursor-pointer select:bg-teal-500 "
+      className="flex flex-col p-6 w-full cursor-pointer  "
       fieldset={fieldset.id}
       key={card.heading}
       cardName={card.heading}
@@ -80,7 +82,7 @@ export default function Example({
       />
       <label
         htmlFor={card.heading}
-        className="block rounded-lg  px-4 py-4"
+        className="block rounded-lg  px-4 py-4 w-full"
         style={{
           backgroundColor:
             userInput.preference === card.heading
@@ -109,16 +111,23 @@ export default function Example({
   console.log(cards);
 
   return (
-    <AccordionItem
-      disabled={fieldset.id === "grindOption" ? grindOptionDisabled : false}
-    >
-      <AccordionItemHeading>
-        <AccordionItemButton
-          className="flex items-center mb-4 font-bold text-2xl text-gray-600 "
-          index={index}
-          accordionIndices={accordionIndices}
-        >
-          {fieldset.heading}
+    <AccordionItem>
+      <AccordionItemHeading
+        style={{
+          display:
+            userInput.preference === "Capsule" && fieldset.id === "grindOption"
+              ? "none"
+              : "flex",
+        }}
+      >
+        <AccordionItemButton>
+          <div
+            className="flex justify-between items-center mb-4 font-bold text-2xl text-gray-600 "
+            index={index}
+            accordionIndices={accordionIndices}
+          >
+            {fieldset.heading}
+          </div>
         </AccordionItemButton>
       </AccordionItemHeading>
       <AccordionItemPanel className="flex mb-8">{cards}</AccordionItemPanel>

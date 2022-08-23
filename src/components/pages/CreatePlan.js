@@ -46,22 +46,10 @@ const CreatePlan = ({ content }) => {
           </p>
         </div>
       </div>
-      <div className="bg-[#333d4b] text-white w-full h-full my-20 mx-[5%] rounded-lg">
+      <div className="bg-[#333d4b] text-white w-full h-full my-10 mx-[5%] rounded-lg">
         <Steps />
       </div>
       <section className="flex mx-[5%] space-x-10">
-        <div className="flex flex-col items-center align-middle">
-          <a href="#how">
-            <span>01</span> Preferences{" "}
-          </a>
-          <button>
-            <span>02</span> Bean Type{" "}
-          </button>
-          <button>03 Quantity </button>
-          <button>04 Grind option </button>
-
-          <button>05 Deliveries </button>
-        </div>
         <Order content={orderForm} />
       </section>
     </>
