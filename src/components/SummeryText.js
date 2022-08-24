@@ -1,11 +1,14 @@
 import React from "react";
 
-const SummeryText = ({ userInput }) => {
+const SummeryText = ({ userInput, displayModal }) => {
   let { preference, beanType, quantity, grindOption, delivery } = userInput;
 
   if (preference === "Capsule") {
     return (
-      <p className="text-white font-bold text-2xl">
+      <p
+        className="text-white font-bold text-2xl"
+        style={{ color: displayModal ? "black" : "white" }}
+      >
         &quot; I drink my coffee using{" "}
         <span className="text-teal-500">{preference || "___"}</span> with a{" "}
         <span className="text-teal-500">{beanType || "___"}</span> type of bean.
@@ -18,7 +21,7 @@ const SummeryText = ({ userInput }) => {
     );
   } else
     return (
-      <p className="text-white font-bold text-2xl">
+      <p className="text-white  font-bold text-2xl">
         &quot;I drink my coffee using{" "}
         <span className="text-teal-500">{preference || "___"}</span> with a{" "}
         <span className="text-teal-500">{beanType || "___"}</span> type of bean.

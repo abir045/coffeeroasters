@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Example from "./Accordion";
 import { Accordion } from "react-accessible-accordion";
 import OrderSummery from "./OrderSummery";
@@ -19,8 +19,6 @@ const Order = ({ content }) => {
     grindOption: null,
     delivery: null,
   });
-
-  console.log(userInput);
 
   // display states of the order modal
 
@@ -56,6 +54,31 @@ const Order = ({ content }) => {
     event.preventDefault();
     setDisplayModal(true);
   };
+
+  // handling formcomplete states in mounting
+
+  useEffect(() => {
+    if (grindOptionDisabled) {
+      if (
+        userInput.preference &&
+        userInput.beanType &&
+        userInput.quantity &&
+        userInput.delivery
+      ) {
+        setFormComplete(true);
+      } else {
+        if (
+          userInput.preference &&
+          userInput.beanType &&
+          userInput.quantity &&
+          userInput.grindOption &&
+          userInput.delivery
+        ) {
+          setFormComplete(true);
+        }
+      }
+    }
+  }, [userInput, grindOptionDisabled]);
 
   return (
     <div className="flex">
@@ -95,7 +118,7 @@ const Order = ({ content }) => {
           <button
             className="p-4 px-8  text-white font-bold rounded-lg bg-[#0E8784]"
             type="submit"
-            disabled={!formComplete}
+            //disabled={!formComplete}
           >
             {content.buttons.first}
           </button>

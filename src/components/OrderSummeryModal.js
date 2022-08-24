@@ -5,8 +5,8 @@ const OrderSummeryModal = ({
   content,
   price,
   userInput,
-  display,
-  setDisplay,
+  displayModal,
+  setDisplayModal,
 }) => {
   // creating a ref for the div
   const backgroundRef = useRef();
@@ -14,24 +14,44 @@ const OrderSummeryModal = ({
   const closeModal = (event) => {
     //current points to the mounted div element
     if (backgroundRef.current === event.target) {
-      setDisplay(false);
+      setDisplayModal(false);
     }
   };
 
   return (
     <>
-      {display ? (
+      {displayModal ? (
         <div
-          className="flex justify-center items-center opacity-80"
+          className="flex fixed w-full h-full left-0 top-0 justify-center items-center bg-transparent  opacity-100 rounded-lg"
           onClick={closeModal}
           ref={backgroundRef}
-          display={display}
+          display={displayModal}
         >
-          <div>
-            <h2>{content.heading}</h2>
-            <SummeryText userInput={userInput} />
-            <p>{content.confirm}</p>
-            <button> Checkout - {price}</button>
+          <div
+            className="w-[540px] max-w-[70%] mb-10 bg-white relative  z-10  mx-auto shadow-xl"
+            style={{
+              visibility: (displayModal) =>
+                displayModal ? "visible" : "hidden",
+              animation: (displayModal) =>
+                displayModal ? "fadeIn 3s linear" : null,
+            }}
+            display={displayModal}
+          >
+            <h2 className="bg-[#333d4b] mb-10 flex text-white text-3xl w-full p-8 font-bold ">
+              {content.heading}
+            </h2>
+
+            <div className="text-black mx-8">
+              <SummeryText displayModal={displayModal} userInput={userInput} />
+            </div>
+
+            <p className="text-gray-500 p-4 text-base mx-5 mb-5">
+              {content.confirm}
+            </p>
+            <button className="flex p-4 mx-8 bg-teal-500 rounded-lg mb-10">
+              {" "}
+              Checkout - {price}
+            </button>
           </div>
         </div>
       ) : null}
