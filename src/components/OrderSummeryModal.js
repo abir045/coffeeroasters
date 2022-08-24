@@ -28,7 +28,7 @@ const OrderSummeryModal = ({
           display={displayModal}
         >
           <div
-            className="w-[540px] max-w-[70%] mb-10 bg-white relative  z-10  mx-auto shadow-xl"
+            className="w-[540px] max-w-[70%] mb-10 bg-white relative  z-10  mx-auto shadow-xl rounded-xl"
             style={{
               visibility: (displayModal) =>
                 displayModal ? "visible" : "hidden",

@@ -12,7 +12,7 @@ const FormProgress = ({ content, userInput, grindOptionDisabled }) => {
   }
 
   return (
-    <div className="flex flex-col mb-6 px-6 mx-6 w-[50%]">
+    <div className="flex flex-col mb-6 px-6 mx-6 w-[50%] sm:hidden md:flex-col">
       {updatedContent.map((fieldset, index) => (
         <div className="flex justify-between items-center text-base mb-10 font-bold">
           <span>{`0${index + 1}`}</span>

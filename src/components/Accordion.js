@@ -65,14 +65,14 @@ export default function Example({
 
   const cards = fieldset.cards.map((card) => (
     <div
-      className="flex flex-col items-center p-2 w-auto h-auto cursor-pointer  "
+      className="flex flex-col items-center p-2 w-auto h-auto cursor-pointer"
       fieldset={fieldset.id}
       key={card.heading}
       cardName={card.heading}
       userInput={userInput}
     >
       <input
-        className="hidden"
+        className="hidden "
         type="radio"
         name={fieldset.id}
         id={card.heading}
@@ -81,23 +81,35 @@ export default function Example({
       />
       <label
         htmlFor={card.heading}
-        className="block rounded-lg  p-4 w-full"
+        className="block  rounded-lg  p-4 w-full"
         style={{
           backgroundColor:
             userInput.preference === card.heading
               ? "#0E8784"
-              : "#FEFCF7" && userInput.beanType === card.heading
+              : "#f4f1eb" && userInput.beanType === card.heading
               ? "#0E8784"
-              : "#FEFCF7" && userInput.quantity === card.heading
+              : "#f4f1eb" && userInput.quantity === card.heading
               ? "#0E8784"
-              : "#FEFCF7" && userInput.grindOption === card.heading
+              : "#f4f1eb" && userInput.grindOption === card.heading
               ? "#0E8784"
-              : "#FEFCF7" && userInput.delivery === card.heading
+              : "#f4f1eb" && userInput.delivery === card.heading
               ? "#0E8784"
-              : "#FEFCF7",
+              : "#f4f1eb",
+          color:
+            userInput.preference === card.heading
+              ? "white"
+              : "black" && userInput.beanType === card.heading
+              ? "white"
+              : "black" && userInput.quantity === card.heading
+              ? "white"
+              : "black" && userInput.grindOption === card.heading
+              ? "white"
+              : "black" && userInput.delivery === card.heading
+              ? "white"
+              : "black",
         }}
       >
-        <h3 className="text-2xl font-bold mb-2">{card.heading}</h3>
+        <h3 className="text-2xl font-bold mb-2 ">{card.heading}</h3>
         <p>
           {fieldset.id === "delivery"
             ? getPricePerShipment(card) + " " + card.description
@@ -106,16 +118,6 @@ export default function Example({
       </label>
     </div>
   ));
-
-  let rotation = 0;
-
-  function rotate() {
-    rotation += 180;
-    if (rotation === 360) {
-      rotation = 0;
-    }
-    document.querySelector("#angle").style.transform = `rotate(${rotation}deg)`;
-  }
 
   return (
     <AccordionItem>

@@ -115,13 +115,15 @@ const Order = ({ content }) => {
 
           <OrderSummery content={content.summary} userInput={userInput} />
 
-          <button
-            className="p-4 px-8  text-white font-bold rounded-lg bg-[#0E8784]"
-            type="submit"
-            //disabled={!formComplete}
-          >
-            {content.buttons.first}
-          </button>
+          <div className="flex justify-center">
+            <button
+              className="p-4 px-8 text-white font-bold rounded-lg bg-[#0E8784]"
+              type="submit"
+              disabled={!formComplete}
+            >
+              {content.buttons.first}
+            </button>
+          </div>
 
           <OrderSummeryModal
             displayModal={displayModal}
