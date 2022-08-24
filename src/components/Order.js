@@ -3,6 +3,7 @@ import Example from "./Accordion";
 import { Accordion } from "react-accessible-accordion";
 import OrderSummery from "./OrderSummery";
 import FormProgress from "./FormProgress";
+import OrderSummeryModal from "./OrderSummeryModal";
 
 const priceFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -21,10 +22,11 @@ const Order = ({ content }) => {
 
   console.log(userInput);
 
-  // display modal states
+  // display states of the order modal
 
   const [displayModal, setDisplayModal] = useState(false);
   const [grindOptionDisabled, setGrindOptionDisabled] = useState(false);
+  // price states
   const [price, setPrice] = useState(0);
   const [accordionIndices, setAccordionIndices] = useState([0]);
   const [formComplete, setFormComplete] = useState(false);
@@ -41,9 +43,12 @@ const Order = ({ content }) => {
   };
 
   const getPrice = () => {
+    // destructuring quantity and delivery from the user input
     const { quantity, delivery } = userInput;
+
     const [pricePerDelivery, deliveries] = content.prices[quantity][delivery];
 
+    // setting price with price formatter
     setPrice(priceFormatter.format(pricePerDelivery * deliveries));
   };
 
@@ -61,7 +66,12 @@ const Order = ({ content }) => {
       />
 
       <div className="flex-col w-full">
-        <form>
+        <form
+          onSubmit={(event) => {
+            handleSubmit(event);
+            getPrice();
+          }}
+        >
           <Accordion onChange={toggleItem} index={accordionIndices}>
             {content.fieldsets.map((fieldset, index) => (
               <Example
@@ -85,9 +95,18 @@ const Order = ({ content }) => {
           <button
             className="p-4 px-8  text-white font-bold rounded-lg bg-[#0E8784]"
             type="submit"
+            disabled={!formComplete}
           >
             {content.buttons.first}
           </button>
+
+          <OrderSummeryModal
+            displayModal={displayModal}
+            setDisplayModal={setDisplayModal}
+            content={content.summary}
+            userInput={userInput}
+            price={price}
+          />
         </form>
       </div>
     </div>
