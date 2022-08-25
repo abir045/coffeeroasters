@@ -21,12 +21,12 @@ const About = () => {
 
         {/* for tab */}
         <img
-          className="hidden w-full h-full mx-6 rounded-2xl sm:block md:hidden"
+          className="hidden w-full h-full  rounded-2xl sm:block md:hidden"
           src={heroTab}
         />
         {/* for desktop */}
         <img
-          className="hidden w-full h-full px-2 mx-10 rounded-2xl  md:block"
+          className="hidden w-full h-full  rounded-2xl  md:block"
           src={hero}
           alt="hero banner"
         />
