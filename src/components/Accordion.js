@@ -136,18 +136,7 @@ export default function Example({
             accordionIndices={accordionIndices}
           >
             {fieldset.heading}
-            <FaAngleDown
-              id="angle"
-              className="transition-transform"
-              // accordionIndices={accordionIndices}
-              // onClick={rotate}
-              // style={{
-              //   transform: (accordionIndices, index) =>
-              //     accordionIndices.includes(index)
-              //       ? "rotate(180deg)"
-              //       : "rotate(0deg)",
-              // }}
-            />
+            <FaAngleDown id="angle" className="transition-transform" />
           </div>
           {/* {fieldset.heading} */}
         </AccordionItemButton>

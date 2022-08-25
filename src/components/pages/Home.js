@@ -18,7 +18,7 @@ const Home = () => {
       {/* hero section */}
       <div className="flex flex-col relative">
         <img
-          className="hidden w-full h-full object-cover rounded-xl px-2 mx-10 lg:block "
+          className="hidden w-full h-full object-cover rounded-xl px-2  lg:block "
           src={Hero}
           alt="cover"
         />
@@ -29,14 +29,14 @@ const Home = () => {
         />
 
         <img
-          className="hidden w-full h-full object-cover sm:block md:block lg:hidden"
+          className="hidden w-full h-full object-cover mx-[5%] rounded-xl sm:block md:block lg:hidden"
           src={Tablet}
           alt="cover"
         />
 
         {/* <div className="absolute top-0 left-0 w-full h-full bg-black/80 opacity-70  text-white sm:hidden"></div> */}
 
-        <div className="absolute left-[3%] top-[15%] md:left-8 md:top-35 lg:top-[10%] lg:left-[5%]">
+        <div className="absolute  mx-[5%] left-[3%] top-[15%] md:left-8 md:top-35 lg:top-[10%] lg:left-[5%]">
           <h1 className="text-center text-white p-4 font-bold text-5xl sm:text-left  md:text-5xl lg:text-6xl w-full lg:w-1/2 xl:w-1/3  md:w-1/2 sm:w-2/3">
             Great coffee made simple.
           </h1>
@@ -52,13 +52,13 @@ const Home = () => {
         </div>
       </div>
       {/*Menu conatainer  */}
-      <div className="block">
+      <div className="block mt-[15%]">
         <h1 className="mt-4 text-center text-5xl font-bold sm:text-7xl lg:text-9xl xl:text-9xl sm:tracking-[.1em] text-gray-300">
           our collection
         </h1>
       </div>
       {/* items container */}
-      <div className="flex flex-col p-8 items-center sm:-mt-11 md:flex-row md:justify-between md:ml-7 md:-mt-12 md:pt-1">
+      <div className="flex flex-col p-8 items-center   sm:-mt-11 md:flex-row md:justify-between md:ml-7 md:-mt-12 md:pt-1 ">
         <div className="flex flex-col sm:flex-row w-full mb-2">
           <img className="w-[250px] mx-auto" src={CoffeBag} alt="menu" />
           <div className="md:hidden">
@@ -158,7 +158,7 @@ const Home = () => {
         </div>
       </div>
       {/* why choose us section */}
-      <section className="flex-col p-8  bg-gray-900 mx-6 px-2 rounded-lg relative">
+      <section className="flex-col p-8  bg-[#333D4B] mx-[5%] px-2 rounded-lg relative">
         <div className="flex-col rounded text-center h-[900px] mb-4 sm:h-[500px]  md:h-[350px] mx-auto">
           <h1 className=" text-white p-4 m-4 text-5xl">Why choose us?</h1>
           <p className=" text-gray-400 text-base mx-2 leading-8 text-center">
@@ -170,13 +170,13 @@ const Home = () => {
         </div>
         {/* reasons to choose container */}
 
-        <div className="absolute top-[35%] p-8 md:top-[65%] text-center justify-center m-auto left-0 right-0 flex flex-col md:flex-row">
+        <div className="absolute top-[40%] p-8  md:top-[55%] sm:top-[45%]  text-center justify-center m-auto left-0 right-0 flex flex-col md:flex-row ">
           {/* 1st card */}
-          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-4  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-8  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img
               src={Bean}
               alt="beans"
-              className="w-1/2 mx-auto m-8 sm:w-1/5"
+              className="w-1/2 mx-auto m-8 p-2 sm:w-1/5"
             />
             <div className="flex flex-col ">
               <h2 className=" text-white text-center  p-4  text-3xl">
@@ -191,8 +191,12 @@ const Home = () => {
 
           {/* 2nd card */}
 
-          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-4 my-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
-            <img src={Gift} alt="gift" className="w-1/2 mx-auto m-8 sm:w-1/5" />
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-8 my-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+            <img
+              src={Gift}
+              alt="gift"
+              className="w-1/2 mx-auto m-8 p-2 sm:w-1/5"
+            />
             <div className="flex flex-col">
               <h2 className="text-white text-center p-4 text-3xl">
                 Exclusive Benefits
@@ -204,11 +208,11 @@ const Home = () => {
             </div>
           </div>
           {/* 3rd card */}
-          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-4  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-8  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img
               src={Shipping}
               alt="shipping"
-              className="w-1/2 mx-auto m-8 sm:w-1/4"
+              className="w-1/2 mx-auto m-8 p-2 sm:w-1/4"
             />
             <div className="flex flex-col">
               <h2 className="text-white text-center p-4 text-3xl">
@@ -221,19 +225,17 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <div>
-          
-        </div> */}
       </section>
+
       {/* procedure description  section*/}
-      <div className="flex flex-col lg:mt-[30%] mx-14 p-4 w-full">
-        <h1 className="text-gray-700  text-center font-bold text-2xl bg-blend-color-burn sm:text-left">
+      <div className="flex flex-col  mx-[5%] p-4 w-full sm:mt-[55%] ">
+        <h1 className="text-gray-700 mx-[5%] text-center font-bold text-2xl bg-blend-color-burn lg:mt-[30%] sm:text-left">
           How it works
         </h1>
         <Steps />
       </div>
 
-      <div className="flex mx-14">
+      <div className="flex mx-[5%]">
         <button className="text-white mx-16  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 sm:mx-4">
           Create your plan
         </button>

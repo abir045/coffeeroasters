@@ -2,13 +2,9 @@ import React from "react";
 
 const Steps = () => {
   return (
-    <section className="flex flex-col w-full p-[5%]">
-      {/* <div className="flex flex-col  p-8 m-6 sm:mt-[60%] md:mt-[50%] lg:mt-[30%] xl:mt-[30%]"> */}
-      {/* <h1 className="text-gray-700 text-center font-bold text-2xl bg-blend-color-burn sm:text-left">
-          How it works
-        </h1> */}
+    <section className="flex flex-col    p-[5%] ">
       {/* indicators */}
-      <div className="hidden sm:flex mt-[10%]">
+      <div className="hidden sm:flex mt-[5%]">
         <div className="flex  rounded-full w-[25px] h-[25px] border-2 border-teal-700"></div>
 
         <hr className="flex items-center h-[3px] justify-center w-[160px] md:w-[200px] lg:w-[280px]  border  border-orange-100 my-3 shadow-inner shadow-orange-100" />
@@ -22,15 +18,15 @@ const Steps = () => {
 
       {/* steps */}
 
-      <div className="flex flex-col  sm:flex-row md:flex-row sm:space-x-3">
-        <div className="flex flex-col w-full">
+      <div className="flex flex-col   sm:flex-row md:flex-row sm:space-x-3">
+        <div className="flex flex-col  w-full ">
           <span className="text-orange-200 font-bold text-center text-7xl my-6 sm:text-left">
             01
           </span>
           <h2 className="text-3xl text-center font-bold my-6 sm:text-left">
             Pick Your Coffee
           </h2>
-          <p className="text-base text-center my-6 w-full sm:text-left sm:p-1">
+          <p className="text-base text-center my-6 w-full  sm:text-left sm:p-1">
             Select from our evolving range of artisan coffees. Our beans are
             ethically sourced and we pay fair price for them. There are new
             coffees in all profiles every month for you to try out
@@ -44,7 +40,7 @@ const Steps = () => {
           <h2 className="text-3xl text-center font-bold my-6 sm:text-left">
             Choose the frequency
           </h2>
-          <p className="text-base text-center my-6 w-full sm:text-left sm:p-1">
+          <p className="text-base text-center my-6 w-full  sm:text-left sm:p-1">
             Customize your order frequency,quantity, even your roast style and
             grind type. Pause, skip or cancel your subscription with no
             commitment through our online portal.
