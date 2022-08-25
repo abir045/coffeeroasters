@@ -5,12 +5,10 @@ import {
   AccordionItem,
   AccordionItemPanel,
   AccordionItemHeading,
-  AccordionItemState,
 } from "react-accessible-accordion";
 
 import { FaAngleDown } from "react-icons/fa";
 import "react-accessible-accordion/dist/fancy-example.css";
-//import DisplayName from "react-accessible-accordion/dist/types/helpers/DisplayName";
 
 export default function Example({
   fieldset,
@@ -24,6 +22,8 @@ export default function Example({
   accordionIndices,
   setAccordionIndices,
 }) {
+  const [isHover, setIsHover] = useState(false);
+
   const handleChange = (event) => {
     // destructuring name and id from user input
     const { name, id } = event.target;
@@ -63,6 +63,14 @@ export default function Example({
     return PricePerShipment;
   };
 
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
+
   const cards = fieldset.cards.map((card) => (
     <div
       className="flex flex-col items-center p-2 w-auto h-auto cursor-pointer"
@@ -79,9 +87,12 @@ export default function Example({
         onChange={handleChange}
         data-fieldsetindex={index}
       />
+      {/* <div className="hover:bg-red-200"> */}
       <label
         htmlFor={card.heading}
-        className="block  rounded-lg  p-4 w-full"
+        className="block  rounded-lg  p-4 w-full hover:bg-red-200"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         style={{
           backgroundColor:
             userInput.preference === card.heading
@@ -94,7 +105,10 @@ export default function Example({
               ? "#0E8784"
               : "#f4f1eb" && userInput.delivery === card.heading
               ? "#0E8784"
+              : "#f4f1eb" && isHover
+              ? "#d6b0ae"
               : "#f4f1eb",
+
           color:
             userInput.preference === card.heading
               ? "white"
@@ -116,6 +130,7 @@ export default function Example({
             : card.description}
         </p>
       </label>
+      {/* </div> */}
     </div>
   ));
 
@@ -129,19 +144,27 @@ export default function Example({
               : "flex",
         }}
       >
-        <AccordionItemButton>
-          <div
-            className="flex justify-between items-center mb-4 font-bold text-2xl text-gray-600 "
+        <AccordionItemButton
+          className="flex  justify-between items-center mb-4 font-bold text-2xl text-gray-600 hover:text-teal-500 "
+          index={index}
+          accordionIndices={accordionIndices}
+        >
+          {/* <div
+            className="flex justify-between items-center mb-4 font-bold text-2xl text-gray-600 hover:text-teal-500 "
             index={index}
             accordionIndices={accordionIndices}
           >
             {fieldset.heading}
-            <FaAngleDown id="angle" className="transition-transform" />
+            
+          </div> */}
+
+          {fieldset.heading}
+          <div className="flex justify-end">
+            <FaAngleDown />
           </div>
-          {/* {fieldset.heading} */}
         </AccordionItemButton>
       </AccordionItemHeading>
-      <AccordionItemPanel className="flex mb-8">{cards}</AccordionItemPanel>
+      <AccordionItemPanel className="flex mb-8 ">{cards}</AccordionItemPanel>
     </AccordionItem>
   );
 }
