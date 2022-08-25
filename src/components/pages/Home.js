@@ -18,7 +18,7 @@ const Home = () => {
       {/* hero section */}
       <div className="flex flex-col relative">
         <img
-          className="hidden w-full h-full object-cover rounded-xl px-2  lg:block "
+          className="hidden w-full h-full object-cover rounded-xl px-2 mx-[5%] lg:block "
           src={Hero}
           alt="cover"
         />
@@ -229,8 +229,8 @@ const Home = () => {
       </section>
 
       {/* procedure description  section*/}
-      <div className="flex flex-col  mx-[5%] p-4 w-full sm:mt-[55%] ">
-        <h1 className="text-gray-700 mx-[5%] text-center font-bold text-2xl bg-blend-color-burn lg:mt-[30%] sm:text-left">
+      <div className="flex flex-col  mx-[5%] p-4 w-full pt-[20%] mt-[90%] sm:mt-[-55%] lg:mt-[-90%] ">
+        <h1 className="text-gray-700 mx-[5%] mt-[90%] pt-[90%] text-center font-bold text-2xl bg-blend-color-burn lg:mt-[30%] mt-[30%] sm:text-left">
           How it works
         </h1>
         <Steps />
