@@ -95,7 +95,11 @@ const Order = ({ content }) => {
             getPrice();
           }}
         >
-          <Accordion onChange={toggleItem} index={accordionIndices}>
+          <Accordion
+            allowMultipleExpanded
+            onChange={toggleItem}
+            index={accordionIndices}
+          >
             {content.fieldsets.map((fieldset, index) => (
               <Example
                 key={fieldset.id}
@@ -119,7 +123,7 @@ const Order = ({ content }) => {
             <button
               className="p-4 px-8 text-white font-bold rounded-lg bg-[#0E8784]"
               type="submit"
-              //disabled={!formComplete}
+              // disabled={!formComplete}
             >
               {content.buttons.first}
             </button>

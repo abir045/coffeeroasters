@@ -22,7 +22,7 @@ const OrderSummeryModal = ({
     <>
       {displayModal ? (
         <div
-          className="flex fixed w-full h-full left-0 top-0 justify-center items-center bg-transparent  opacity-100 rounded-lg"
+          className="flex fixed w-full h-full left-0 top-0 justify-center items-center bg-transparent  opacity-100"
           onClick={closeModal}
           ref={backgroundRef}
           display={displayModal}
@@ -37,7 +37,7 @@ const OrderSummeryModal = ({
             }}
             display={displayModal}
           >
-            <h2 className="bg-[#333d4b] mb-10 flex text-white text-3xl w-full p-8 font-bold ">
+            <h2 className="bg-[#333d4b] mb-10 flex text-white text-3xl w-full p-8 font-bold rounded-xl ">
               {content.heading}
             </h2>
 
@@ -48,9 +48,9 @@ const OrderSummeryModal = ({
             <p className="text-gray-500 p-4 text-base mx-5 mb-5">
               {content.confirm}
             </p>
-            <button className="flex p-4 mx-8 bg-teal-500 rounded-lg mb-10">
+            <button className="flex p-4 mx-8 text-xl bg-teal-500 font-bold text-white  rounded-lg mb-10">
               {" "}
-              Checkout - {price}
+              Checkout - {price}/mo
             </button>
           </div>
         </div>
