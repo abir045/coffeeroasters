@@ -237,7 +237,7 @@ const Home = () => {
       </div>
 
       <div className="flex mx-[5%]">
-        <button className="text-white mx-16  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 sm:mx-4">
+        <button className="text-white  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 ">
           <a href="/create">Create your plan</a>
         </button>
       </div>
