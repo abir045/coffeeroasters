@@ -15,12 +15,9 @@ import qualityTab from "../../images/tab/image-quality.jpg";
 const About = () => {
   return (
     <>
-      <div className="flex flex-col relative mb-[15%] ">
+      <div className="flex flex-col mx-[5%] relative mb-[10%] ">
         {/* for mb */}
-        <img
-          className="w-full h-full mx-6 rounded-2xl sm:hidden"
-          src={heroMb}
-        />
+        <img className="w-full h-full rounded-2xl sm:hidden" src={heroMb} />
 
         {/* for tab */}
         <img
@@ -34,9 +31,9 @@ const About = () => {
           alt="hero banner"
         />
 
-        <div className="absolute left-10 px-4 md:mx-[10%]  top-[30%]">
+        <div className="absolute text-center left-10   md:mx-[10%]  top-[30%]">
           <h1 className="text-4xl text-white font-bold mb-8">About us</h1>
-          <p className="text-gray-300  mx-auto text-base ">
+          <p className="text-gray-300   text-base ">
             Coffeeroasters began its journey of exotic discovery in 1999,
             <br />
             highlighting stories of coffee from around the world. We have <br />
@@ -46,7 +43,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-col space-y-3 justify-between mx-2 px-6 mb-[15%] pb-20 md:flex-row">
+      <div className="flex flex-col space-y-3 justify-between mx-[5%]  mb-[15%] pb-20 md:flex-row">
         <img
           className="hidden rounded-lg w-[300px] md:mx-20 md:block"
           src={commitment}
@@ -90,7 +87,7 @@ const About = () => {
         <h1 className="text-white text-4xl p-4 md:text-left md:mx-12 md:my-10 my-8 text-center">
           Uncompromising <br /> quality
         </h1>
-        <p className="text-white px-6 md:mx-16 md:w-[500px] md:leading-8  mx-6">
+        <p className="text-white px- md:mx-16 md:w-[500px] md:leading-8  mx-6">
           Although we work with growers who pay close attention to all stages of
           harvest and processing, we employ, on our end, a rigorous quality
           control program to avoid over-roasting or baking the coffee dry. Every
@@ -104,12 +101,15 @@ const About = () => {
             src={quality}
           />
           {/* for mb */}
-          <img src={qualityMb} className="rounded-lg w-[300px]   sm:hidden" />
+          <img
+            src={qualityMb}
+            className="rounded-lg w-[300px] flex  sm:hidden"
+          />
 
           {/* for tab */}
           <img
-            src={qualityTab}
-            className="hidden rounded-lg w-[300px]   sm:flex md:hidden"
+            src={qualityMb}
+            className="hidden rounded-lg w-[1/2]   sm:flex md:hidden "
           />
         </div>
       </div>
