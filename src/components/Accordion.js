@@ -73,7 +73,7 @@ export default function Example({
 
   const cards = fieldset.cards.map((card) => (
     <div
-      className="flex flex-col items-center p-2 w-auto h-auto cursor-pointer"
+      className="flex  items-center p-2 w-auto h-auto cursor-pointer"
       fieldset={fieldset.id}
       key={card.heading}
       cardName={card.heading}
@@ -90,7 +90,7 @@ export default function Example({
       {/* <div className="hover:bg-red-200"> */}
       <label
         htmlFor={card.heading}
-        className="block  rounded-lg  p-4 w-full hover:bg-red-200"
+        className="block  rounded-lg  p-4 w-full hover:bg-red-200 "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -145,7 +145,7 @@ export default function Example({
         }}
       >
         <AccordionItemButton
-          className="flex  justify-between items-center mb-4 font-bold text-2xl text-gray-600 hover:text-teal-500 "
+          className="flex justify-between items-center mb-4 font-bold text-2xl text-gray-600 hover:text-teal-500 "
           index={index}
           accordionIndices={accordionIndices}
         >
@@ -164,7 +164,9 @@ export default function Example({
           </div>
         </AccordionItemButton>
       </AccordionItemHeading>
-      <AccordionItemPanel className="flex mb-8 ">{cards}</AccordionItemPanel>
+      <AccordionItemPanel className="flex flex-col  sm:flex-row  mb-8 ">
+        {cards}
+      </AccordionItemPanel>
     </AccordionItem>
   );
 }
