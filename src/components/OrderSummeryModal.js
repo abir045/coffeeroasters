@@ -50,7 +50,7 @@ const OrderSummeryModal = ({
             </p>
             <button className="flex p-4 mx-8 text-xl bg-teal-500 font-bold text-white  rounded-lg mb-10">
               {" "}
-              Checkout - {price}/mo
+              Checkout - {price}
             </button>
           </div>
         </div>
