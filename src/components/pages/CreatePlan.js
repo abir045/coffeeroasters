@@ -32,7 +32,7 @@ const CreatePlan = ({ content }) => {
         />
         {/* for desktop */}
         <img
-          className="hidden w-full h-full  mx-[5%] rounded-2xl  md:block"
+          className="hidden w-full h-full  rounded-2xl  md:block"
           src={hero}
           alt="hero banner"
         />
