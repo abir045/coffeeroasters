@@ -86,11 +86,11 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex flex-col bg-slate-800 rounded-lg mx-[5%] py-20 mt-20 relative">
+      <div className="flex flex-col bg-[#333D4B] rounded-lg mx-[5%] py-20 mt-20 relative">
         <h1 className="text-white text-4xl p-4 md:text-left md:mx-12 md:my-10 my-8 text-center">
           Uncompromising <br /> quality
         </h1>
-        <p className="text-white md:mx-16 md:w-[500px] md:leading-8  mx-6">
+        <p className="text-white px-6 md:mx-16 md:w-[500px] md:leading-8  mx-6">
           Although we work with growers who pay close attention to all stages of
           harvest and processing, we employ, on our end, a rigorous quality
           control program to avoid over-roasting or baking the coffee dry. Every
@@ -98,9 +98,9 @@ const About = () => {
           is to roast consistent, user-friendly coffee, so that brewing is easy
           and enjoyable.
         </p>
-        <div className="flex  absolute md:left-[60%]   sm:top-[-5%] left-[8%] top-[-10%]">
+        <div className="flex  absolute md:left-[60%]  sm:top-[-5%] left-[8%] top-[-10%]">
           <img
-            className="hidden rounded-lg object-cover w-[60%] h-[500px] md:w-[300px]  md:block"
+            className="hidden rounded-lg object-cover w-[55%] h-[500px] md:w-[300px]  md:block"
             src={quality}
           />
           {/* for mb */}
