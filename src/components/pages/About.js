@@ -51,7 +51,7 @@ const About = () => {
         />
         {/* for mb */}
         <img
-          className="flex w-full h-full rounded-lg  sm:hidden"
+          className="flex w-full h-full rounded-lg   sm:hidden"
           src={commitmentMb}
           alt="barista"
         />
