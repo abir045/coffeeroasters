@@ -44,7 +44,7 @@ const CreatePlan = ({ content }) => {
           </p>
         </div>
       </div>
-      <div className="bg-[#333d4b] text-white sm:mx-[5%] lg:mx-[5%]  h-[50%]  w-full p-4  mt-[15%] rounded-lg">
+      <div className="bg-[#333d4b] text-white sm:mx-[5%] lg:mx-[5%]  h-[50%]  lg:w-[90%] p-4  mt-[15%] rounded-lg">
         <Steps />
       </div>
       <section className="flex  mt-[15%] mx-[5%] space-x-10">
