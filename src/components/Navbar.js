@@ -18,7 +18,11 @@ const Navbar = () => {
     <>
       <div className="flex items-center justify-between w-full">
         <div className="flex p-6 sm:p-8 justify-start ">
-          <img className="w-[30px] -rotate-90 mx-1" src={Coffee} alt="coffee" />
+          <img
+            className="w-[30px]  -rotate-90 md:mx-[5%] lg:mx-[5%] xl:mx-[10%] 2xl:mx-[15%]"
+            src={Coffee}
+            alt="coffee"
+          />
           <h3 className="font-bold text-3xl">coffeeroasters</h3>
         </div>
 
@@ -62,18 +66,21 @@ const Navbar = () => {
 
         {/* destop nav */}
 
-        <div className="hidden md:flex p-8 font-bold space-x-6  text-gray-600 sm:mr-[5%]">
-          <a className="text-xs  cursor-pointer  uppercase sm:mx-1" href="/">
+        <div className="hidden md:flex p-8 font-bold space-x-6  text-gray-800 sm:mr-[5%]">
+          <a
+            className="text-xs  cursor-pointer  uppercase sm:mx-1 hover:text-teal-500"
+            href="/"
+          >
             Home
           </a>
           <a
-            className="text-xs cursor-pointer uppercase  sm:mx-1"
+            className="text-xs cursor-pointer uppercase sm:mx-1 hover:text-teal-500"
             href="/about"
           >
             About Us
           </a>
           <a
-            className="text-xs cursor-pointer uppercase  sm:mx-1"
+            className="text-xs cursor-pointer uppercase sm:mx-1 hover:text-teal-500"
             href="/create"
           >
             Create your plan

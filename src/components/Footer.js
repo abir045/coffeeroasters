@@ -28,13 +28,19 @@ const Footer = () => {
       <div className="hidden  sm:flex space-x-10 p-4 font-medium  text-gray-400 sm:mr-[5%]">
         {/* for mobile */}
 
-        <a className="text-xs  cursor-pointer uppercase sm:mx-1  " href="/">
+        <a
+          className="text-xs  cursor-pointer uppercase sm:mx-1 hover:text-teal-500"
+          href="/"
+        >
           Home
         </a>
-        <a className="text-xs cursor-pointer uppercase sm:mx-1 " href="/about">
+        <a
+          className="text-xs cursor-pointer uppercase sm:mx-1 hover:text-teal-500"
+          href="/about"
+        >
           About Us
         </a>
-        <a className="text-xs cursor-pointer uppercase sm:mx-1 ">
+        <a className="text-xs cursor-pointer uppercase sm:mx-1 hover:text-teal-500">
           Create your plan
         </a>
       </div>
