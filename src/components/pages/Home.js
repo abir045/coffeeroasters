@@ -162,7 +162,7 @@ const Home = () => {
       <section className="flex-col p-8  bg-[#333D4B] mx-[5%] px-2 rounded-lg relative">
         <div className="flex-col rounded text-center h-[900px] mb-4 sm:h-[500px]  md:h-[350px] mx-auto">
           <h1 className=" text-white p-4 m-4 text-5xl">Why choose us?</h1>
-          <p className=" text-gray-400 text-base mx-2 leading-8 text-center">
+          <p className=" text-gray-300 text-base mx-[5%] leading-8 text-center  md:text-center">
             A large part of our role is choosing which particular coffees will
             be featured in our range. That means working closely with the best
             coffee growers to give you a more impactful experience at every
@@ -236,7 +236,7 @@ const Home = () => {
         <Steps />
       </div>
 
-      <div className="flex justify-center sm:mx-[5%]">
+      <div className="flex justify-center md:justify-start sm:mx-[5%]">
         <button className="text-white  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 hover:ease-in-out hover:opacity-40 ">
           <a href="/create">Create your plan</a>
         </button>
