@@ -23,7 +23,7 @@ const Home = () => {
           alt="cover"
         />
         <img
-          className="w-full h-full object-cover mx-6 px-2 rounded-xl  sm:hidden"
+          className="w-full h-full object-cover mx-[5%]  rounded-xl  sm:hidden"
           src={Mobile}
           alt="cover"
         />
