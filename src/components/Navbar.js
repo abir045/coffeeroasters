@@ -17,13 +17,13 @@ const Navbar = () => {
   return (
     <>
       <div className="flex items-center justify-between w-full">
-        <div className="flex p-6 sm:p-8 justify-start ">
+        <div className="flex p-6 sm:p-8 justify-start xl:mx-[2%] ">
           <img
-            className="w-[30px]  -rotate-90 md:mx-[5%] lg:mx-[5%] xl:mx-[10%] 2xl:mx-[15%]"
+            className="w-[30px]  -rotate-90 md:mx-[5%] lg:mx-[5%] xl:mx-[5%] 2xl:mx-[5%]"
             src={Coffee}
             alt="coffee"
           />
-          <h3 className="font-bold text-3xl">coffeeroasters</h3>
+          <h3 className="font-bold text-3xl lg:mx-[-5%]">coffeeroasters</h3>
         </div>
 
         {/* nav icon */}
