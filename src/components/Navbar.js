@@ -27,7 +27,7 @@ const Navbar = () => {
         <GiHamburgerMenu
           onClick={() => setDisplayNav(!displayNav)}
           size={40}
-          className="mx-auto mr-8 md:hidden"
+          className="mx-auto mr-[5%] md:hidden"
         />
 
         {displayNav ? (
