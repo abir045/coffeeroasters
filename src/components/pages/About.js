@@ -108,8 +108,8 @@ const About = () => {
 
           {/* for tab */}
           <img
-            src={qualityMb}
-            className="hidden rounded-lg w-[1/2]   sm:flex md:hidden "
+            src={qualityTab}
+            className="hidden rounded-lg  w-[50%] mx-auto  mb-10 items-center sm:flex md:hidden "
           />
         </div>
       </div>

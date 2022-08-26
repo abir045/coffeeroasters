@@ -18,7 +18,7 @@ const Home = () => {
       {/* hero section */}
       <div className="flex flex-col relative">
         <img
-          className="hidden w-full h-full object-cover rounded-xl px-2 mx-[5%] lg:block "
+          className="hidden w-full h-full object-cover rounded-2xl  mx-[5%] lg:block "
           src={Hero}
           alt="cover"
         />
@@ -36,17 +36,17 @@ const Home = () => {
 
         {/* <div className="absolute top-0 left-0 w-full h-full bg-black/80 opacity-70  text-white sm:hidden"></div> */}
 
-        <div className="absolute  mx-[5%] left-[3%] top-[15%] md:left-8 md:top-35 lg:top-[10%] lg:left-[5%]">
-          <h1 className="text-center text-white p-4 font-bold text-5xl sm:text-left  md:text-5xl lg:text-6xl w-full lg:w-1/2 xl:w-1/3  md:w-1/2 sm:w-2/3">
+        <div className="absolute  mx-[5%] left-[3%] top-[15%] md:left-8 md:top-35 lg:top-[10%] lg:left-[5%] sm:mx-[5%]">
+          <h1 className="text-center text-white p-4 font-bold text-5xl sm:text-left  md:text-5xl lg:text-6xl w-full md:w-[60%] lg:w-[60%] xl:w-[40%] sm:w-2/3">
             Great coffee made simple.
           </h1>
-          <p className="text-sm text-center md:text-left sm:text-left  text-gray-300 p-4 tracking-wide w-full mx-4  leading-6 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-4/5 ">
+          <p className="text-sm text-center md:text-left sm:text-left  text-gray-300 p-4 tracking-wide w-full   leading-6 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-4/5 ">
             Start your mornings with the worlds best coffee.Try our expertly
             curated artisan coffees from our best roasters delivered directly to
             your door, at your schedule
           </p>
 
-          <button className="text-white mx-14  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 sm:mx-4">
+          <button className="text-white mx-14  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 sm:mx-4 hover:ease-in-out hover:opacity-40">
             {" "}
             <a href="/create">Create your plan</a>
           </button>
@@ -171,13 +171,13 @@ const Home = () => {
         </div>
         {/* reasons to choose container */}
 
-        <div className="absolute top-[40%] p-8  md:top-[55%] sm:top-[45%]  text-center justify-center m-auto left-0 right-0 flex flex-col md:flex-row ">
+        <div className="absolute top-[40%] p-8  md:top-[55%] sm:top-[45%]  text-center justify-center m-auto left-0 right-0 flex flex-col space-y-2 md:flex-row ">
           {/* 1st card */}
           <div className="flex flex-col rounded-lg bg-teal-700 w-full p-8  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img
               src={Bean}
               alt="beans"
-              className="w-1/2 mx-auto m-8 p-2 sm:w-1/5"
+              className="w-[60%] mx-auto m-8 p-2 lg:w-[60%] md:w-[60%] sm:w-1/5"
             />
             <div className="flex flex-col ">
               <h2 className=" text-white text-center  p-4  text-3xl">
@@ -192,11 +192,11 @@ const Home = () => {
 
           {/* 2nd card */}
 
-          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-8 my-4 sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full  p-8  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img
               src={Gift}
               alt="gift"
-              className="w-1/2 mx-auto m-8 p-2 sm:w-1/5"
+              className="w-1/2 mx-auto m-8 p-2 sm:w-1/5 lg:w-[60%] md:w-[50%]"
             />
             <div className="flex flex-col">
               <h2 className="text-white text-center p-4 text-3xl">
@@ -213,7 +213,7 @@ const Home = () => {
             <img
               src={Shipping}
               alt="shipping"
-              className="w-1/2 mx-auto m-8 p-2 sm:w-1/4"
+              className="w-1/2 mx-auto m-8 p-2 sm:w-1/3 lg:w-[60%] md:w-[60%]"
             />
             <div className="flex flex-col">
               <h2 className="text-white text-center p-4 text-3xl">
@@ -237,7 +237,7 @@ const Home = () => {
       </div>
 
       <div className="flex mx-[5%]">
-        <button className="text-white  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 ">
+        <button className="text-white  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 hover:ease-in-out hover:opacity-40 ">
           <a href="/create">Create your plan</a>
         </button>
       </div>

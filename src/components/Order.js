@@ -121,7 +121,7 @@ const Order = ({ content }) => {
 
           <div className="flex justify-center">
             <button
-              className="p-4 px-8 text-white font-bold rounded-lg bg-[#0E8784]"
+              className="p-4 px-8 text-white font-bold rounded-lg bg-[#0E8784] hover:ease-in-out hover:opacity-40"
               type="submit"
               // disabled={!formComplete}
             >

@@ -12,8 +12,6 @@ const CreatePlan = ({ content }) => {
 
   console.log(content);
 
-  const [isActive, setIsActive] = useState(false);
-
   return (
     <>
       <div className="flex flex-col mx-[5%] relative ">
@@ -39,7 +37,7 @@ const CreatePlan = ({ content }) => {
 
         <div className="absolute   left-10 px-4 md:mx-[5%] mx-[5%] top-[30%]">
           <h1 className="text-4xl text-white font-bold mb-8">Create a plan</h1>
-          <p className="text-gray-300  text-base text-center md:text-left w-[90%] ">
+          <p className="text-gray-300  text-base text-center md:text-left sm:text-left w-full ">
             Build a subscription plan that best fits your needs. We offer an
             assortment of the best artisan coffees from around the globe
             delivered fresh to your door.
