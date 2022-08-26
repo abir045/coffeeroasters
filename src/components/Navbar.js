@@ -66,7 +66,7 @@ const Navbar = () => {
 
         {/* destop nav */}
 
-        <div className="hidden md:flex p-8 font-bold space-x-6  text-gray-800 sm:mr-[5%]">
+        <div className="hidden md:flex  font-bold space-x-6  text-gray-800 sm:mr-[5%]">
           <a
             className="text-xs  cursor-pointer  uppercase sm:mx-1 hover:text-teal-500"
             href="/"

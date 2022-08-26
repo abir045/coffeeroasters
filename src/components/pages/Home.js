@@ -18,7 +18,7 @@ const Home = () => {
       {/* hero section */}
       <div className="flex flex-col relative">
         <img
-          className="hidden w-full h-full object-cover rounded-2xl  mx-[5%] lg:block "
+          className="hidden w-[90%] h-full object-cover rounded-2xl  mx-[5%] lg:block "
           src={Hero}
           alt="cover"
         />
@@ -29,7 +29,7 @@ const Home = () => {
         />
 
         <img
-          className="hidden w-full h-full object-cover mx-[5%] rounded-xl sm:block md:block lg:hidden"
+          className="hidden w-[90%] h-full object-cover mx-[5%] rounded-xl sm:block md:block lg:hidden"
           src={Tablet}
           alt="cover"
         />
