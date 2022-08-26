@@ -23,7 +23,7 @@ const Home = () => {
           alt="cover"
         />
         <img
-          className="w-full h-full object-cover mx-[5%]  rounded-xl  sm:hidden"
+          className="w-[90%] h-full object-cover mx-[5%]  rounded-xl  sm:hidden"
           src={Mobile}
           alt="cover"
         />
@@ -236,7 +236,7 @@ const Home = () => {
         <Steps />
       </div>
 
-      <div className="flex mx-[5%]">
+      <div className="flex justify-center sm:mx-[5%]">
         <button className="text-white  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 hover:ease-in-out hover:opacity-40 ">
           <a href="/create">Create your plan</a>
         </button>
