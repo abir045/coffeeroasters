@@ -10,9 +10,10 @@ import Bean from "../../images/coffee-last.svg";
 import Gift from "../../images/shipping-2.svg";
 import Shipping from "../../images/shipping.svg";
 import Steps from "../steps";
-import CreateButton from "../createButton";
 
-const Home = () => {
+const Home = ({ content }) => {
+  const { banner, products, whyChooseUs, orderProcess } = content;
+
   return (
     <>
       {/* hero section */}
@@ -38,27 +39,26 @@ const Home = () => {
 
         <div className="absolute  mx-[5%] left-[3%] top-[15%] md:left-8 md:top-35 lg:top-[10%] lg:left-[5%] sm:mx-[5%]">
           <h1 className="text-center text-white p-4 font-bold text-5xl sm:text-left  md:text-5xl lg:text-6xl w-full md:w-[60%] lg:w-[60%] xl:w-[40%] sm:w-2/3">
-            Great coffee made simple.
+            {banner.heading}
           </h1>
           <p className="text-sm text-center md:text-left sm:text-left  text-gray-300 p-4 tracking-wide w-full   leading-6 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-4/5 ">
-            Start your mornings with the worlds best coffee.Try our expertly
-            curated artisan coffees from our best roasters delivered directly to
-            your door, at your schedule
+            {banner.body}
           </p>
 
           <button className="text-white mx-14  text-3xl bg-teal-700 font-bold rounded-lg p-4 my-10 sm:mx-4 hover:ease-in-out hover:opacity-40">
             {" "}
-            <a href="/create">Create your plan</a>
+            <a href="/create">{banner.button}</a>
           </button>
         </div>
       </div>
       {/*Menu conatainer  */}
       <div className="block mt-[15%]">
         <h1 className="mt-4 text-center text-5xl font-bold sm:text-7xl lg:text-9xl xl:text-9xl sm:tracking-[.1em] text-gray-300">
-          our collection
+          {products.heading}
         </h1>
       </div>
       {/* items container */}
+
       <div className="flex flex-col p-8 items-center   sm:-mt-11 md:flex-row md:justify-between md:ml-7 md:-mt-12 md:pt-1 ">
         <div className="flex flex-col sm:flex-row w-full mb-2">
           <img className="w-[250px] mx-auto" src={CoffeBag} alt="menu" />

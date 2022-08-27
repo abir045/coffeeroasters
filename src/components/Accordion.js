@@ -145,7 +145,7 @@ export default function Example({
         }}
       >
         <AccordionItemButton
-          className="flex justify-between items-center mb-4 font-bold text-2xl text-gray-600 hover:text-teal-500 "
+          className="flex justify-between w-full space-x-8 items-center mb-4 font-bold text-2xl text-gray-600 hover:text-teal-500  "
           index={index}
           accordionIndices={accordionIndices}
         >
@@ -159,8 +159,8 @@ export default function Example({
           </div> */}
 
           {fieldset.heading}
-          <div className="flex justify-end">
-            <FaAngleDown />
+          <div className="flex justify-end ">
+            <FaAngleDown className="justify-end" />
           </div>
         </AccordionItemButton>
       </AccordionItemHeading>
