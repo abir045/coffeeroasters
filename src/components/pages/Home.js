@@ -19,12 +19,12 @@ const Home = ({ content }) => {
       {/* hero section */}
       <div className="flex flex-col relative">
         <img
-          className="hidden w-[90%] h-full object-cover rounded-2xl  mx-[5%] lg:block "
+          className="hidden h-full object-cover rounded-2xl  mx-[5%] lg:block "
           src={Hero}
           alt="cover"
         />
         <img
-          className="w-[90%] h-full object-cover mx-[5%]  rounded-xl  sm:hidden"
+          className="h-full object-cover mx-[5%]  rounded-xl  sm:hidden"
           src={Mobile}
           alt="cover"
         />
@@ -52,21 +52,21 @@ const Home = ({ content }) => {
         </div>
       </div>
       {/*Menu conatainer  */}
-      <div className="block mt-[15%]">
-        <h1 className="mt-4 text-center text-5xl font-bold sm:text-7xl lg:text-9xl xl:text-9xl sm:tracking-[.1em] text-gray-300">
+      <div className="block mt-[10%] w-full">
+        <h1 className="mt-4  text-center text-5xl font-bold sm:text-7xl lg:text-9xl xl:text-9xl sm:tracking-[.1em] text-gray-300">
           {products.heading}
         </h1>
       </div>
       {/* items container */}
 
-      <div className="flex flex-col p-8 items-center   sm:-mt-11 md:flex-row md:justify-between md:ml-7 md:-mt-12 md:pt-1 ">
-        <div className="flex flex-col sm:flex-row w-full mb-2">
+      <div className="flex flex-col px-[5%] items-center  sm:-mt-11 md:flex-row md:justify-between md:ml-7 md:-mt-12 md:pt-1 ">
+        <div className="flex flex-col sm:flex-row w-full mb-2 ">
           <img className="w-[250px] mx-auto" src={CoffeBag} alt="menu" />
           <div className="md:hidden">
             <h3 className="text-3xl text-center font-bold text-gray-800 ">
               Gran Espresso
             </h3>
-            <p className="text-base text-center  m-2 p-2 leading-10 text-gray-500">
+            <p className="text-base text-center  m-2  leading-10 text-gray-500">
               Light and flavorful blend with cocoa and black pepper for an
               intense exoperience
             </p>
@@ -118,50 +118,51 @@ const Home = ({ content }) => {
         </div>
       </div>
       {/* text container for desktop size */}
-      <div className="hidden p-8 md:flex  md:justify-evenly">
-        <div className="flex flex-col  w-full">
-          <h3 className="text-3xl text-center font-bold text-gray-800 ">
+      <div className="hidden mb-[10%]  md:flex md:flex-row  md:justify-center w-full" >
+        
+        <div className="flex flex-col items-center w-full mx-[5%] ">
+          <h3 className="text-2xl text-center font-bold text-gray-900">
             Gran Espresso
           </h3>
-          <p className="text-lg text-center w-full m-2 p-2 leading-10 text-gray-500">
+          <p className="text-base text-center mt-5  text-gray-800 ">
             Light and flavorful blend with cocoa and black pepper for an intense
             exoperience
           </p>
         </div>
 
-        <div className="flex flex-col w-full ">
-          <h3 className="text-center text-3xl font-bold text-gray-800">
+        <div className="flex flex-col w-full items-center mx-[5%] ">
+          <h3 className="text-center text-2xl font-bold text-gray-900">
             Planalto
           </h3>
-          <p className="text-center text-lg w-full p-2 m-2 leading-10 text-gray-500">
+          <p className="text-center text-base w-full  mt-5  text-gray-800">
             Brazilian dark roast with rich velvety and body, and rich with
             fruits and nuts
           </p>
         </div>
 
-        <div className="flex flex-col w-full">
-          <h3 className="text-3xl text-center font-bold text-gray-800">
+        <div className="flex flex-col w-full items-center mx-[5%]">
+          <h3 className="text-2xl text-center font-bold text-gray-900">
             Piccolo
           </h3>
-          <p className="text-lg text-center w-full p-4 leading-10 text-gray-500">
+          <p className="text-base text-center w-full  mt-5  text-gray-800">
             Mild and smooth blend featuring notes of toasted almond and dried
             cherry
           </p>
         </div>
-        <div className="flex flex-col w-full">
-          <h3 className="text-3xl text-center font-bold text-gray-800">
+        <div className="flex flex-col w-full items-center mx-[5%]">
+          <h3 className="text-2xl text-center font-bold text-gray-900">
             Danche
           </h3>
-          <p className="text-center text-lg w-full p-2 m-2 leading-10 text-gray-500">
+          <p className="text-center text-base w-full  mt-5   text-gray-800">
             Ethiopian hand-hervested blend densly packed with vibrant fruit
             notes
           </p>
         </div>
       </div>
       {/* why choose us section */}
-      <section className="flex-col p-8  bg-[#333D4B] mx-[5%] px-2 rounded-lg relative">
+      <section className="flex-col  p-8  bg-[#333D4B] mx-[5%] px-[5%] rounded-lg relative">
         <div className="flex-col rounded text-center h-[900px] mb-4 sm:h-[500px]  md:h-[350px] mx-auto">
-          <h1 className=" text-white p-4 m-4 text-5xl">Why choose us?</h1>
+          <h1 className=" text-white p-4 my-2 text-5xl">Why choose us?</h1>
           <p className=" text-gray-300 text-base mx-[5%] leading-8 text-center  md:text-center">
             A large part of our role is choosing which particular coffees will
             be featured in our range. That means working closely with the best
@@ -171,19 +172,19 @@ const Home = ({ content }) => {
         </div>
         {/* reasons to choose container */}
 
-        <div className="absolute top-[40%] p-8  md:top-[55%] sm:top-[45%]  text-center justify-center m-auto left-0 right-0 flex flex-col space-y-2 md:flex-row ">
+        <div className="absolute top-[40%]  md:top-[55%] sm:top-[45%]  text-center justify-center items-baseline mx-[5%] left-0 right-0 flex flex-col space-y-2 md:flex-row ">
           {/* 1st card */}
-          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-8  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full h-full px-3 py-4  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img
               src={Bean}
               alt="beans"
-              className="w-[60%] mx-auto m-8 p-2 lg:w-[60%] md:w-[60%] sm:w-1/5"
+              className="w-1/2 mx-auto m-2 px-2 lg:w-[60%] md:w-[60%] sm:w-1/5"
             />
-            <div className="flex flex-col ">
-              <h2 className=" text-white text-center  p-4  text-3xl">
+            <div className="flex flex-col w-full">
+              <h2 className=" text-white text-center  px-4  text-2xl">
                 Best Quality
               </h2>
-              <p className="text-white p-4 text-center text-sm leading-6 mx-2">
+              <p className="text-white my-5 text-center text-sm w-full mx-2">
                 Discover an endless variety of the world's best artisan coffee
                 from each of our roasters
               </p>
@@ -192,34 +193,34 @@ const Home = ({ content }) => {
 
           {/* 2nd card */}
 
-          <div className="flex flex-col rounded-lg bg-teal-700 w-full  p-8  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full h-full px-4 py-2 sm:flex-row sm:w-full sm:mx-auto md:mx-5 md:flex-col">
             <img
               src={Gift}
               alt="gift"
-              className="w-1/2 mx-auto m-8 p-2 sm:w-1/5 lg:w-[60%] md:w-[50%]"
+              className="w-1/2 mx-auto  p-2 sm:w-1/5 lg:w-[60%] md:w-[50%]"
             />
-            <div className="flex flex-col">
-              <h2 className="text-white text-center p-4 text-3xl">
+            <div className="flex flex-col w-full">
+              <h2 className="text-white text-center w-full text-2xl">
                 Exclusive Benefits
               </h2>
-              <p className="text-white p-4 text-center text-base mx-4">
+              <p className="text-white my-5 text-center text-base mx-2 w-full">
                 Special offers and swag when you subscribe, including 30% off
                 your first shipment
               </p>
             </div>
           </div>
           {/* 3rd card */}
-          <div className="flex flex-col rounded-lg bg-teal-700 w-full p-8  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
+          <div className="flex flex-col rounded-lg bg-teal-700 w-full h-full px-4 py-2  sm:flex-row sm:w-full sm:mx-auto md:mx-4 md:flex-col">
             <img
               src={Shipping}
               alt="shipping"
-              className="w-1/2 mx-auto m-8 p-2 sm:w-1/3 lg:w-[60%] md:w-[60%]"
+              className="w-1/2 mx-auto  sm:w-1/3 lg:w-[60%] md:w-[60%]"
             />
-            <div className="flex flex-col">
-              <h2 className="text-white text-center p-4 text-3xl">
+            <div className="flex flex-col w-full">
+              <h2 className="text-white text-center w-full text-2xl">
                 Free Shipping
               </h2>
-              <p className="text-white p-4 text-center text-base mx-4">
+              <p className="text-white my-5 text-center text-base mx-2 w-full">
                 We cover the cost and the coffee is delivered fast. Peak
                 freshness : guaranteed
               </p>
